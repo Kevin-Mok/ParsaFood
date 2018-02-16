@@ -1,0 +1,7 @@
+#Fri Feb 16 16:43:06 EST 2018
+base.0=/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_901f733d4a62cd8bbfb31c822dee16edb488a3f2
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_b08f2eabdc0190570ed6a6d8e9cc5e0c891762d1/classes.dex
+base.1=/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_b08f2eabdc0190570ed6a6d8e9cc5e0c891762d1
+file.0=/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_901f733d4a62cd8bbfb31c822dee16edb488a3f2/classes.dex
