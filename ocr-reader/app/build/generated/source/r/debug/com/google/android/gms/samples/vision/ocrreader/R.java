@@ -2701,6 +2701,7 @@ containing a value of this type.
         public static final int notification_template_icon_bg=0x7f02007f;
     }
     public static final class id {
+        public static final int TakePicture=0x7f0b0093;
         public static final int action0=0x7f0b0083;
         public static final int action_bar=0x7f0b0065;
         public static final int action_bar_activity_content=0x7f0b0000;

@@ -6,5 +6,13 @@
     {
         "merged": "/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
         "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
     }
 ]

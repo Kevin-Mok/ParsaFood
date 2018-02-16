@@ -12,15 +12,91 @@
         "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/abc_background_cache_hint_selector_material_light.xml"
     },
     {
+        "merged": "/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/res/merged/debug/color/abc_btn_colored_borderless_text_material.xml",
+        "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/abc_btn_colored_borderless_text_material.xml"
+    },
+    {
         "merged": "/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/color/abc_tint_switch_thumb.xml",
         "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/abc_tint_switch_thumb.xml"
+    },
+    {
+        "merged": "/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_dark.xml",
+        "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/abc_primary_text_disable_only_material_dark.xml"
+    },
+    {
+        "merged": "/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/res/merged/debug/color/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/res/merged/debug/color/design_tint_password_toggle.xml",
+        "source": "/Users/davidkwon/.android/build-cache/6599a142c7715c71d379249a0b8fafd25501a07c/output/res/color/design_tint_password_toggle.xml"
+    },
+    {
+        "merged": "/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_light.xml",
+        "source": "/Users/davidkwon/.android/build-cache/ad31b0270d9163f929bab8f6ea5bae9c7f8003c0/output/res/color/common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/res/merged/debug/color/abc_tint_btn_checkable.xml",
+        "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_dark.xml",
+        "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/abc_primary_text_material_dark.xml"
+    },
+    {
+        "merged": "/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/res/merged/debug/color/design_error.xml",
+        "source": "/Users/davidkwon/.android/build-cache/6599a142c7715c71d379249a0b8fafd25501a07c/output/res/color/design_error.xml"
+    },
+    {
+        "merged": "/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/color/abc_tint_seek_thumb.xml",
+        "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/color/abc_tint_spinner.xml",
+        "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/abc_tint_spinner.xml"
+    },
+    {
+        "merged": "/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_light.xml",
+        "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/abc_primary_text_material_light.xml"
+    },
+    {
+        "merged": "/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/color/abc_search_url_text.xml",
+        "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/abc_search_url_text.xml"
+    },
+    {
+        "merged": "/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/res/merged/debug/color/common_plus_signin_btn_text_dark.xml",
+        "source": "/Users/davidkwon/.android/build-cache/ad31b0270d9163f929bab8f6ea5bae9c7f8003c0/output/res/color/common_plus_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_dark.xml",
+        "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/abc_secondary_text_material_dark.xml"
+    },
+    {
+        "merged": "/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/color/abc_btn_colored_borderless_text_material.xml",
+        "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_light.xml",
+        "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/res/merged/debug/color/abc_tint_edittext.xml",
+        "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/abc_tint_edittext.xml"
+    },
+    {
+        "merged": "/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/res/merged/debug/color/switch_thumb_material_dark.xml",
+        "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/switch_thumb_material_dark.xml"
+    },
+    {
+        "merged": "/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_light.xml",
+        "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/abc_primary_text_material_light.xml"
     },
     {
         "merged": "/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_light.xml",
         "source": "/Users/davidkwon/.android/build-cache/ad31b0270d9163f929bab8f6ea5bae9c7f8003c0/output/res/color/common_google_signin_btn_text_light.xml"
     },
     {
-        "merged": "/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_dark.xml",
+        "merged": "/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_dark.xml",
         "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/abc_primary_text_disable_only_material_dark.xml"
     },
     {
@@ -32,36 +108,60 @@
         "source": "/Users/davidkwon/.android/build-cache/ad31b0270d9163f929bab8f6ea5bae9c7f8003c0/output/res/color/common_google_signin_btn_text_dark.xml"
     },
     {
+        "merged": "/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/res/merged/debug/color/abc_tint_default.xml",
+        "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/abc_tint_default.xml"
+    },
+    {
+        "merged": "/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_light.xml",
+        "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/abc_primary_text_disable_only_material_light.xml"
+    },
+    {
         "merged": "/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/color/abc_background_cache_hint_selector_material_dark.xml",
         "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/abc_background_cache_hint_selector_material_dark.xml"
+    },
+    {
+        "merged": "/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/res/merged/debug/color/abc_tint_switch_track.xml",
+        "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/res/merged/debug/color/switch_thumb_material_light.xml",
+        "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/switch_thumb_material_light.xml"
+    },
+    {
+        "merged": "/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/res/merged/debug/color/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/abc_background_cache_hint_selector_material_dark.xml"
+    },
+    {
+        "merged": "/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/res/merged/debug/color/abc_search_url_text.xml",
+        "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/abc_search_url_text.xml"
     },
     {
         "merged": "/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/color/switch_thumb_material_light.xml",
         "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/switch_thumb_material_light.xml"
     },
     {
+        "merged": "/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/res/merged/debug/color/common_plus_signin_btn_text_light.xml",
+        "source": "/Users/davidkwon/.android/build-cache/ad31b0270d9163f929bab8f6ea5bae9c7f8003c0/output/res/color/common_plus_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/res/merged/debug/color/abc_tint_seek_thumb.xml",
+        "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/abc_tint_seek_thumb.xml"
+    },
+    {
         "merged": "/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_light.xml",
         "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/abc_secondary_text_material_light.xml"
+    },
+    {
+        "merged": "/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_dark.xml",
+        "source": "/Users/davidkwon/.android/build-cache/ad31b0270d9163f929bab8f6ea5bae9c7f8003c0/output/res/color/common_google_signin_btn_text_dark.xml"
     },
     {
         "merged": "/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_dark.xml",
         "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/abc_primary_text_material_dark.xml"
     },
     {
-        "merged": "/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_light.xml",
-        "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/abc_primary_text_material_light.xml"
-    },
-    {
-        "merged": "/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/color/abc_tint_spinner.xml",
-        "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/abc_tint_spinner.xml"
-    },
-    {
-        "merged": "/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/color/abc_tint_seek_thumb.xml",
-        "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/abc_tint_seek_thumb.xml"
-    },
-    {
-        "merged": "/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/color/abc_search_url_text.xml",
-        "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/abc_search_url_text.xml"
+        "merged": "/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_light.xml",
+        "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/abc_secondary_text_material_light.xml"
     },
     {
         "merged": "/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/color/design_error.xml",
@@ -72,8 +172,16 @@
         "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/abc_tint_btn_checkable.xml"
     },
     {
+        "merged": "/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/res/merged/debug/color/abc_tint_switch_thumb.xml",
+        "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/abc_tint_switch_thumb.xml"
+    },
+    {
         "merged": "/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_dark.xml",
         "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/abc_secondary_text_material_dark.xml"
+    },
+    {
+        "merged": "/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/res/merged/debug/color/abc_tint_spinner.xml",
+        "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/abc_tint_spinner.xml"
     },
     {
         "merged": "/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/color/abc_tint_default.xml",
@@ -86,14 +194,6 @@
     {
         "merged": "/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/color/switch_thumb_material_dark.xml",
         "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/switch_thumb_material_dark.xml"
-    },
-    {
-        "merged": "/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/color/abc_btn_colored_borderless_text_material.xml",
-        "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/abc_btn_colored_borderless_text_material.xml"
-    },
-    {
-        "merged": "/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_light.xml",
-        "source": "/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/res/color/abc_primary_text_disable_only_material_light.xml"
     },
     {
         "merged": "/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/color/common_plus_signin_btn_text_light.xml",

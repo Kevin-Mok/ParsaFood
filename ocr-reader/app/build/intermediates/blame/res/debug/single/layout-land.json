@@ -2,5 +2,9 @@
     {
         "merged": "/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/res/merged/debug/layout-land/activity_main.xml",
         "source": "/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/res/layout-land/activity_main.xml"
+    },
+    {
+        "merged": "/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/res/merged/debug/layout-land/activity_main.xml",
+        "source": "/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/res/layout-land/activity_main.xml"
     }
 ]

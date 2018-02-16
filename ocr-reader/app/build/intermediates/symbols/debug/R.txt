@@ -695,6 +695,7 @@ int drawable design_snackbar_background 0x7f02007c
 int drawable icon 0x7f02007d
 int drawable navigation_empty_icon 0x7f02007e
 int drawable notification_template_icon_bg 0x7f02007f
+int id TakePicture 0x7f0b0093
 int id action0 0x7f0b0083
 int id action_bar 0x7f0b0065
 int id action_bar_activity_content 0x7f0b0000

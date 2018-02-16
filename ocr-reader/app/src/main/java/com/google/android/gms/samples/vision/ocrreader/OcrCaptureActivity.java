@@ -37,6 +37,7 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -85,6 +86,14 @@ public final class OcrCaptureActivity extends AppCompatActivity {
         super.onCreate(icicle);
         setContentView(R.layout.ocr_capture);
 
+        Button takePicture = (Button) findViewById(R.id.TakePicture);
+        takePicture.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("YOU CLICKED THE BUTTON:", "NICE!");
+            }
+        });
+
         mPreview = (CameraSourcePreview) findViewById(R.id.preview);
         mGraphicOverlay = (GraphicOverlay<OcrGraphic>) findViewById(R.id.graphicOverlay);
 
@@ -108,6 +117,8 @@ public final class OcrCaptureActivity extends AppCompatActivity {
                 Snackbar.LENGTH_LONG)
                 .show();
     }
+
+
 
     /**
      * Handles the requesting of the camera permission.  This includes

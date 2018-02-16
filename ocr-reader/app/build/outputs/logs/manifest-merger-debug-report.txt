@@ -1,30 +1,30 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml:2:1-36:12
+ADDED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml:2:1-36:12
 	package
-		ADDED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml:3:5-62
-		INJECTED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml
+		ADDED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml:3:5-62
+		INJECTED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml:2:11-69
 	android:versionCode
-		INJECTED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml
 	android:installLocation
-		ADDED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml:4:5-35
+		ADDED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml:4:5-35
 uses-feature#android.hardware.camera
-ADDED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml:6:5-60
+ADDED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml:6:5-60
 	android:name
-		ADDED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml:6:19-57
+		ADDED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml:6:19-57
 uses-permission#android.permission.CAMERA
-ADDED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml:8:5-65
+ADDED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml:8:5-65
 	android:name
-		ADDED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml:8:22-62
+		ADDED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml:8:22-62
 application
-ADDED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml:10:5-34:19
+ADDED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml:10:5-34:19
 MERGED from [com.google.android.gms:play-services-vision:9.4.0] /Users/davidkwon/.android/build-cache/0ab9eba3ee560458c7e3142f02c8d72262b48329/output/AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-base:9.4.0] /Users/davidkwon/.android/build-cache/ad31b0270d9163f929bab8f6ea5bae9c7f8003c0/output/AndroidManifest.xml:19:5-23:19
 MERGED from [com.google.android.gms:play-services-tasks:9.4.0] /Users/davidkwon/.android/build-cache/956afe78dcf08a274aa87d1be620b4452c2f6ea6/output/AndroidManifest.xml:5:5-20
@@ -40,49 +40,49 @@ MERGED from [com.android.support:support-media-compat:24.2.0] /Users/davidkwon/.
 MERGED from [com.android.support:support-core-ui:24.2.0] /Users/davidkwon/.android/build-cache/010a9495ebb6406339eb0a76ce4c0e60cb27ff02/output/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-compat:24.2.0] /Users/davidkwon/.android/build-cache/bfea5b8f2eb8fb1c3e939196bfc6d5e7521b87d3/output/AndroidManifest.xml:25:5-20
 	android:label
-		ADDED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml:15:9-40
+		ADDED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml:15:9-40
 	android:supportsRtl
-		ADDED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml:16:9-37
+		ADDED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml:16:9-37
 	android:hardwareAccelerated
-		ADDED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml:13:9-43
+		ADDED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml:13:9-43
 	android:fullBackupContent
-		ADDED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml:12:9-42
+		ADDED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml:12:9-42
 	android:allowBackup
-		ADDED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml:11:9-35
+		ADDED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml:11:9-35
 	android:icon
-		ADDED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml:14:9-38
+		ADDED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml:14:9-38
 	android:theme
-		ADDED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml:17:9-47
+		ADDED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml:17:9-47
 meta-data#com.google.android.gms.vision.DEPENDENCIES
-ADDED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml:18:9-20:35
+ADDED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml:18:9-20:35
 	android:value
-		ADDED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml:20:13-32
+		ADDED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml:20:13-32
 	android:name
-		ADDED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml:19:13-70
+		ADDED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml:19:13-70
 activity#com.google.android.gms.samples.vision.ocrreader.MainActivity
-ADDED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml:22:9-30:20
+ADDED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml:22:9-30:20
 	android:label
-		ADDED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml:24:13-56
+		ADDED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml:24:13-56
 	android:name
-		ADDED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml:23:13-88
+		ADDED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml:23:13-88
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml:25:13-29:29
+ADDED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml:25:13-29:29
 action#android.intent.action.MAIN
-ADDED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml:26:17-69
+ADDED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml:26:17-69
 	android:name
-		ADDED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml:26:25-66
+		ADDED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml:26:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml:28:17-77
+ADDED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml:28:17-77
 	android:name
-		ADDED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml:28:27-74
+		ADDED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml:28:27-74
 activity#com.google.android.gms.samples.vision.ocrreader.OcrCaptureActivity
-ADDED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml:32:9-33:41
+ADDED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml:32:9-33:41
 	android:label
-		ADDED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml:33:13-38
+		ADDED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml:33:13-38
 	android:name
-		ADDED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml:32:19-100
+		ADDED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml:32:19-100
 uses-sdk
-INJECTED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.google.android.gms:play-services-vision:9.4.0] /Users/davidkwon/.android/build-cache/0ab9eba3ee560458c7e3142f02c8d72262b48329/output/AndroidManifest.xml:4:5-42
 MERGED from [com.google.android.gms:play-services-base:9.4.0] /Users/davidkwon/.android/build-cache/ad31b0270d9163f929bab8f6ea5bae9c7f8003c0/output/AndroidManifest.xml:18:5-42
 MERGED from [com.google.android.gms:play-services-tasks:9.4.0] /Users/davidkwon/.android/build-cache/956afe78dcf08a274aa87d1be620b4452c2f6ea6/output/AndroidManifest.xml:4:5-43
@@ -101,11 +101,11 @@ MERGED from [com.android.support:support-compat:24.2.0] /Users/davidkwon/.androi
 	tools:overrideLibrary
 		ADDED from [com.android.support:appcompat-v7:24.2.0] /Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
-		INJECTED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/src/main/AndroidManifest.xml
 activity#com.google.android.gms.common.api.GoogleApiActivity
 ADDED from [com.google.android.gms:play-services-base:9.4.0] /Users/davidkwon/.android/build-cache/ad31b0270d9163f929bab8f6ea5bae9c7f8003c0/output/AndroidManifest.xml:20:9-22:45
 	android:exported
