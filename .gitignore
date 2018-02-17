@@ -11,6 +11,7 @@
 *.sass-cache
 node_modules/
 .tmp/
+*.txt
 
 # OS or Editor folders
 .DS_Store
@@ -27,3 +28,15 @@ nbproject
 .komodotools
 _notes
 dwsync.xml
+
+# Android Studio
+*.json
+*.rawproto
+*.dex
+*.apk
+*.iml
+*.properties
+.*/
+ocr-reader/build/
+ocr-reader/.*
+ocr-reader/app/build/
