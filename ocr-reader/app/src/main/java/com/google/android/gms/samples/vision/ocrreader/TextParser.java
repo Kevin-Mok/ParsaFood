@@ -18,7 +18,7 @@ public class TextParser {
         bit 9 --- vegetarian
         bit 10 --- Gluten free
         */
-        tt.setUserPreferences("0010101");
+        tt.setUserPreferences("1111111111");
         ArrayList<String> ii = new ArrayList<String>(Arrays.asList("Soy, ", "soy ojojo milk"));
         ArrayList<ArrayList> done  = tt.checkAllergens(ii);
         ArrayList<String> done2 = tt.checkLactose(ii);
@@ -41,10 +41,26 @@ public class TextParser {
 
     public ArrayList<String> allLactose; // the list of things a lactose intolerant person should not eat
 
+    public ArrayList<String> allVegan;
+
+    public ArrayList<String> allVegetarian;
+
+    public ArrayList<String> allGluten;
+
     public TextParser(){
         this.allAllergens = this.fillInAllergens();
         this.allLactose = (new ArrayList(Arrays.asList("milk", "butter", "buttermilk", "casein", "cheese", "cream",
                 "curds", "lactose", "lactulose", "lactate", "custard", "yogurt")));
+        this.allVegan = (new ArrayList(Arrays.asList("milk", "butter", "buttermilk", "casein", "cheese", "cream",
+                "curds", "lactose", "lactulose", "lactate", "custard", "yogurt", "pork", "meat", "beef", "chicken",
+                "honey", "lamb", "veal", "turkey", "egg", "anchovies", "bass", "catfish", "cod", "grouper", "haddock",
+                "pike", "salmon", "snapper", "tilapia", "tuna", "trout", "fish", "crawfish", "crab", "krill",
+                "lobster", "shrimp", "mussels", "squid", "ham", "bacon")));
+        this.allVegetarian = (new ArrayList(Arrays.asList("pork", "meat", "beef", "chicken",
+                "lamb", "veal", "turkey", "egg", "anchovies", "bass", "catfish", "cod", "grouper", "haddock",
+                "pike", "salmon", "snapper", "tilapia", "tuna", "trout", "fish", "crawfish", "crab", "krill",
+                "lobster", "shrimp", "mussels", "squid", "ham", "bacon")));
+        this.allGluten = (new ArrayList(Arrays.asList("wheat", "rye", "barley", "bulgur", "couscous", "farina", "flour")));
     }
 
     public ArrayList fillInAllergens(){
@@ -132,6 +148,65 @@ public class TextParser {
         return returnList;
     }
 
+    public ArrayList checkVegan(ArrayList<String> ingredients){
+        // Return example ["The warning message here", "gluten", "pork", "beef"]
+        ArrayList returnList = new ArrayList();
+        if (this.userAllergens.get(7).equals("1")){
+            returnList.add("Warning: Since you are a vegan you may want to avoid eating this. It contains...");
+            ArrayList<String> allIngredients = this.processIngredients(ingredients);
+            for (String ingredient: allIngredients){
+                for (String item: this.allVegan){
+                    if (ingredient.equals(item)){
+                        returnList.add(item);
+                    }
+                }
+            }
+            if (returnList.size() <= 1){
+                returnList = new ArrayList();
+            }
+        }
+        return returnList;
+    }
+
+    public ArrayList checkVegaterian(ArrayList<String> ingredients){
+        // Return example ["The warning message here", "veal", "pork", "beef"]
+        ArrayList returnList = new ArrayList();
+        if (this.userAllergens.get(8).equals("1")){
+            returnList.add("Warning: Since you are a vegetarian you may want to avoid eating this. It contains...");
+            ArrayList<String> allIngredients = this.processIngredients(ingredients);
+            for (String ingredient: allIngredients){
+                for (String item: this.allVegetarian){
+                    if (ingredient.equals(item)){
+                        returnList.add(item);
+                    }
+                }
+            }
+            if (returnList.size() <= 1){
+                returnList = new ArrayList();
+            }
+        }
+        return returnList;
+    }
+
+    public ArrayList checkGluten(ArrayList<String> ingredients){
+        // Return example ["The warning message here", "Gluten", "rye"]
+        ArrayList returnList = new ArrayList();
+        if (this.userAllergens.get(9).equals("1")){
+            returnList.add("Warning: Since you prefer gluten free foods you may want to avoid eating this. It contains...");
+            ArrayList<String> allIngredients = this.processIngredients(ingredients);
+            for (String ingredient: allIngredients){
+                for (String item: this.allVegetarian){
+                    if (ingredient.equals(item)){
+                        returnList.add(item);
+                    }
+                }
+            }
+            if (returnList.size() <= 1){
+                returnList = new ArrayList();
+            }
+        }
+        return returnList;
+    }
 
     public void setUserPreferences(String userAllergens){
         this.userAllergens.clear();
