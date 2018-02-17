@@ -6,9 +6,23 @@ import java.util.Arrays;
 public class TextParser {
     public static void main(String[] args) {
         TextParser tt = new TextParser();
-        tt.setUserPreferences("001010");
-        ArrayList<String> ii = new ArrayList<String>(Arrays.asList("Soy, ", "soy ojojo"));
+        /*
+        bit 1 --- milk allergen
+        bit 2 --- egg allergen
+        bit 3 --- peanut/nut allergens
+        bit 4 --- wheat allergens
+        bit 5 --- soy allergens
+        bit 6 --- seafood allergens
+        bit 7 --- lactose intolerant
+        bit 8 --- vegan (1= yes, 0 = no)
+        bit 9 --- vegetarian
+        bit 10 --- Gluten free
+        */
+        tt.setUserPreferences("0010101");
+        ArrayList<String> ii = new ArrayList<String>(Arrays.asList("Soy, ", "soy ojojo milk"));
         ArrayList<ArrayList> done  = tt.checkAllergens(ii);
+        ArrayList<String> done2 = tt.checkLactose(ii);
+
 
         for (ArrayList<String> sub : done){
             for (String str : sub){
@@ -16,13 +30,21 @@ public class TextParser {
             }
         }
 
+        for (String str : done2){
+            System.out.println(str);
+        }
+
     }
     public ArrayList<ArrayList<String>> allAllergens;
 
     public ArrayList<String> userAllergens = new ArrayList<>();
 
+    public ArrayList<String> allLactose; // the list of things a lactose intolerant person should not eat
+
     public TextParser(){
         this.allAllergens = this.fillInAllergens();
+        this.allLactose = (new ArrayList(Arrays.asList("milk", "butter", "buttermilk", "casein", "cheese", "cream",
+                "curds", "lactose", "lactulose", "lactate", "custard", "yogurt")));
     }
 
     public ArrayList fillInAllergens(){
@@ -39,7 +61,7 @@ public class TextParser {
         // wheat allergens
         returnList.add(new ArrayList(Arrays.asList("wheat", "bread", "bulgur", "cereal", "cracker", "flour")));
         // soy allergens
-        returnList.add(new ArrayList(Arrays.asList("soy", "soya", "miso", "tofu", "edamame", "flour")));
+        returnList.add(new ArrayList(Arrays.asList("soy", "soya", "miso", "tofu", "edamame")));
         // seafood allergens
         returnList.add(new ArrayList(Arrays.asList("anchovies", "bass", "catfish", "cod", "grouper", "haddock",
                 "pike", "salmon", "snapper", "tilapia", "tuna", "trout", "fish", "crawfish", "crab", "krill",
@@ -47,13 +69,8 @@ public class TextParser {
         return returnList;
     }
 
-    public ArrayList checkAllergens(ArrayList<String> ingredients){
-        ArrayList returnList = new ArrayList();
+    public ArrayList processIngredients(ArrayList<String> ingredients){
         ArrayList<String> allIngredients = new ArrayList();
-        ArrayList mapping = new ArrayList(Arrays.asList("milk allergen(s)", "egg allergen(s)", "peanut/nut allergen(s)",
-                "wheat allergen(s)", "soy allergen(s)", "seafood allergen(s)"));
-
-
         // turn ingredient list passed in into a single array called allIngredients
         String line;
         String[] linePieces;
@@ -64,6 +81,14 @@ public class TextParser {
                 allIngredients.add(str2.replaceAll("[^a-zA-Z]", ""));
             }
         }
+        return allIngredients;
+    }
+
+    public ArrayList checkAllergens(ArrayList<String> ingredients){
+        ArrayList returnList = new ArrayList();
+        ArrayList<String> allIngredients = this.processIngredients(ingredients);
+        ArrayList mapping = new ArrayList(Arrays.asList("milk allergen(s)", "egg allergen(s)", "peanut/nut allergen(s)",
+                "wheat allergen(s)", "soy allergen(s)", "seafood allergen(s)"));
 
         // now iterate and find any allergens
         ArrayList temp;
@@ -86,6 +111,27 @@ public class TextParser {
         }
         return returnList;
     }
+
+    public ArrayList checkLactose(ArrayList<String> ingredients){
+        // Return example ["The warning message here", "milk", "cheese", "lactose"]
+        ArrayList returnList = new ArrayList();
+        if (this.userAllergens.get(6).equals("1")){
+            returnList.add("Warning: Since you are lactose intolerant you may want to avoid eating this. It contains...");
+            ArrayList<String> allIngredients = this.processIngredients(ingredients);
+            for (String ingredient: allIngredients){
+                for (String item: this.allLactose){
+                    if (ingredient.equals(item)){
+                        returnList.add(item);
+                    }
+                }
+            }
+            if (returnList.size() <= 1){
+                returnList = new ArrayList();
+            }
+        }
+        return returnList;
+    }
+
 
     public void setUserPreferences(String userAllergens){
         this.userAllergens.clear();
