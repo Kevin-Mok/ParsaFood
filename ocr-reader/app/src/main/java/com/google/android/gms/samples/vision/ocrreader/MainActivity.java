@@ -55,8 +55,8 @@ import com.google.android.gms.common.api.CommonStatusCodes;
         setContentView(R.layout.activity_main);
 
         setPreferences = (Button)findViewById(R.id.set_preferences);
-        statusMessage = (TextView)findViewById(R.id.status_message);
-        textValue = (TextView)findViewById(R.id.text_value);
+/*        statusMessage = (TextView)findViewById(R.id.status_message);
+        textValue = (TextView)findViewById(R.id.text_value);*/
 
 
         setPreferences.setOnClickListener(new View.OnClickListener() {
@@ -75,7 +75,6 @@ import com.google.android.gms.common.api.CommonStatusCodes;
         //logo.setImageDrawable(logoDrawable);
 
         preferences = getPreferencesFromActivity();
-        Log.i("PREFS:", preferences);
 
 
         findViewById(R.id.read_text).setOnClickListener(this);
@@ -128,8 +127,8 @@ import com.google.android.gms.common.api.CommonStatusCodes;
      * @see #createPendingResult
      * @see #setResult(int)
      */
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//    @Override
+    /*protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if(requestCode == RC_OCR_CAPTURE) {
             if (resultCode == CommonStatusCodes.SUCCESS) {
                 if (data != null) {
@@ -159,5 +158,5 @@ import com.google.android.gms.common.api.CommonStatusCodes;
         else {
             super.onActivityResult(requestCode, resultCode, data);
         }
-    }
+    }*/
 }

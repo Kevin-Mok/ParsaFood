@@ -3,6 +3,7 @@ package com.google.android.gms.samples.vision.ocrreader;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -21,11 +22,13 @@ import com.google.android.gms.vision.text.TextBlock;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class AfterCaptureActivity extends AppCompatActivity {
 
     ArrayList<String> itemList;
     Button anotherPicture;
+    Button textToSpeechButton;
     ImageView icon;
     TextView titleText;
     TextParser parser  = new TextParser();
@@ -33,6 +36,8 @@ public class AfterCaptureActivity extends AppCompatActivity {
     Drawable check;
     Drawable negative;
     String preferences;
+    TextToSpeech ts;
+    StringBuilder speechText = new StringBuilder();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,11 +52,23 @@ public class AfterCaptureActivity extends AppCompatActivity {
         icon = (ImageView) findViewById(R.id.icon);
         titleText = (TextView) findViewById(R.id.TitleText);
         badIngredientsBox = (LinearLayout)findViewById(R.id.BadIngredientsBox);
+        textToSpeechButton = (Button) findViewById(R.id.TextToSpeech);
 
         parser.setUserPreferences(preferences);
 
         check = getResources().getDrawable(R.drawable.check);
         negative = getResources().getDrawable(R.drawable.negative);
+
+        ts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                if (status != TextToSpeech.ERROR) {
+                    ts.setLanguage(Locale.US);
+                }
+            }
+        });
+
+        ts.setSpeechRate(0.9f);
 
         for (int i = 0; i < itemList.size(); i++) {
             Log.i("ITEM " + i, itemList.get(i));
@@ -72,10 +89,13 @@ public class AfterCaptureActivity extends AppCompatActivity {
 
         if (noBadIngredients(allergenItems, lactoseItems, veganItems, vegetarianItems, glutenItems)) {
             Log.i("OK", "its a");
+            speechText.append("The ingredients are okay.");
             icon.setImageDrawable(check);
         } else {
             Log.i("OK", "its n");
-            titleText.setText("Ingredients are not OK.");
+            speechText.append("The ingredients are not okay, ");
+            icon.setImageDrawable(check);
+            titleText.setText("Ingredients are not OK. ");
             titleText.setTextColor(Color.rgb(209,89,98));
             icon.setImageDrawable(negative);
 
@@ -112,6 +132,13 @@ public class AfterCaptureActivity extends AppCompatActivity {
             }
         });
 
+        textToSpeechButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ts.speak(speechText.toString(), TextToSpeech.QUEUE_FLUSH, null);
+            }
+        });
+
     }
 
     private boolean noBadIngredients(ArrayList<ArrayList<String>> a,
@@ -131,8 +158,20 @@ public class AfterCaptureActivity extends AppCompatActivity {
     }
 
     private void displayNegativeNested(ArrayList<ArrayList<String>> result) {
+        Log.i("Cheese", "displayNegNested");
 
-        for (int i = 0; i < result.size(); i++) {
+        for (int i = 0; i < result.size() - 1; i++) {
+            for (int j = 0; j < result.get(i).size(); j++) {
+                Log.i("Cheese", result.get(i).get(j));
+            }
+        }
+
+        Log.i("Cheese", "Weaning stringL " + result.get(result.size() - 1));
+
+        speechText.append(result.get(result.size() - 1));
+        speechText.append(" ");
+
+        for (int i = 0; i < result.size() - 1; i++) {
             for (int j = 0; j < result.get(i).size(); j++) {
                 Log.i("OK", result.get(i).get(j));
                 TextView text = new TextView(this);
@@ -143,11 +182,17 @@ public class AfterCaptureActivity extends AppCompatActivity {
                 badIngredientsBox.addView(text);
             }
         }
+
+
     }
 
     private void displayNegative(ArrayList<String> result) {
-        Log.i("displayneg", "in" + result.size());
-        for (int i = 0; i < result.size(); i++) {
+        Log.i("Cheese", "in" + result.size());
+        for (int i = 0; i < result.size() - 1; i++) {
+            Log.i("Cheese", result.get(i));
+        }
+
+        for (int i = 0; i < result.size() - 1; i++) {
             Log.i("OK", result.get(i));
             TextView text = new TextView(this);
             text.setText(result.get(i));
@@ -156,6 +201,8 @@ public class AfterCaptureActivity extends AppCompatActivity {
             text.setGravity(Gravity.CENTER_HORIZONTAL);
             badIngredientsBox.addView(text);
         }
+        speechText.append(result.get(result.size() - 1));
+        speechText.append(" ");
     }
 
 
