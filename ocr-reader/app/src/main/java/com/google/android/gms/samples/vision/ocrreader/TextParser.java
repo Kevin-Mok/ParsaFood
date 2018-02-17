@@ -7,7 +7,7 @@ public class TextParser {
     public static void main(String[] args) {
         TextParser tt = new TextParser();
         tt.setUserPreferences("001010");
-        ArrayList<String> ii = new ArrayList<String>(Arrays.asList("Soy, ", "soy ojojo"));
+        ArrayList<String> ii = new ArrayList<String>(Arrays.asList("SOY, ", "soy ojojo"));
         ArrayList<ArrayList> done  = tt.checkAllergens(ii);
 
         for (ArrayList<String> sub : done){
@@ -39,7 +39,7 @@ public class TextParser {
         // wheat allergens
         returnList.add(new ArrayList(Arrays.asList("wheat", "bread", "bulgur", "cereal", "cracker", "flour")));
         // soy allergens
-        returnList.add(new ArrayList(Arrays.asList("soy", "soya", "miso", "tofu", "edamame", "flour")));
+        returnList.add(new ArrayList(Arrays.asList("soy", "soya", "miso", "tofu", "edamame")));
         // seafood allergens
         returnList.add(new ArrayList(Arrays.asList("anchovies", "bass", "catfish", "cod", "grouper", "haddock",
                 "pike", "salmon", "snapper", "tilapia", "tuna", "trout", "fish", "crawfish", "crab", "krill",

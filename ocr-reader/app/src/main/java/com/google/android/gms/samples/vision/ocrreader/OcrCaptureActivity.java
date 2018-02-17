@@ -102,13 +102,17 @@ public final class OcrCaptureActivity extends AppCompatActivity {
 
                 SparseArray<TextBlock> items = detectorProcessor.getDetectedList();
 
-                for (int i = 0; i < items.size(); ++i) {
-                    TextBlock item = items.valueAt(i);
-                    if (item != null && item.getValue() != null) {
-                        itemList.add(item.getValue());
-
+                try {
+                    for (int i = 0; i < items.size(); ++i) {
+                        TextBlock item = items.valueAt(i);
+                        if (item != null && item.getValue() != null) {
+                            itemList.add(item.getValue());
+                        }
                     }
+                } catch (Exception e) {
+                    Log.e("Error", e.toString());
                 }
+
 
 //                for (int i = 0; i < itemList.size(); i++) {
 //                    Log.i("ITEM ITEM" + Integer.toString(i), itemList.get(i));
@@ -126,7 +130,7 @@ public final class OcrCaptureActivity extends AppCompatActivity {
         mGraphicOverlay = (GraphicOverlay<OcrGraphic>) findViewById(R.id.graphicOverlay);
 
         // read parameters from the intent used to launch the activity.
-        boolean autoFocus = getIntent().getBooleanExtra(AutoFocus, false);
+        boolean autoFocus = getIntent().getBooleanExtra(AutoFocus, true);
         boolean useFlash = getIntent().getBooleanExtra(UseFlash, false);
 
         // Check for the camera permission before accessing the camera.  If the

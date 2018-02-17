@@ -17,11 +17,14 @@
 package com.google.android.gms.samples.vision.ocrreader;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.app.Activity;
 import android.util.Log;
 import android.view.View;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.android.gms.common.api.CommonStatusCodes;
@@ -37,6 +40,9 @@ import com.google.android.gms.common.api.CommonStatusCodes;
     private CompoundButton useFlash;
     private TextView statusMessage;
     private TextView textValue;
+    private ImageView logo;
+
+    private Drawable logoDrawable;
 
     private static final int RC_OCR_CAPTURE = 9003;
     private static final String TAG = "MainActivity";
@@ -48,6 +54,10 @@ import com.google.android.gms.common.api.CommonStatusCodes;
 
         statusMessage = (TextView)findViewById(R.id.status_message);
         textValue = (TextView)findViewById(R.id.text_value);
+        logo = (ImageView)findViewById(R.id.Logo);
+
+        logoDrawable = getResources().getDrawable(R.drawable.final_logo);
+        logo.setImageDrawable(logoDrawable);
 
         autoFocus = (CompoundButton) findViewById(R.id.auto_focus);
         useFlash = (CompoundButton) findViewById(R.id.use_flash);
@@ -65,8 +75,8 @@ import com.google.android.gms.common.api.CommonStatusCodes;
         if (v.getId() == R.id.read_text) {
             // launch Ocr capture activity.
             Intent intent = new Intent(this, OcrCaptureActivity.class);
-            intent.putExtra(OcrCaptureActivity.AutoFocus, autoFocus.isChecked());
-            intent.putExtra(OcrCaptureActivity.UseFlash, useFlash.isChecked());
+            intent.putExtra(OcrCaptureActivity.AutoFocus, true);
+            intent.putExtra(OcrCaptureActivity.UseFlash, false);
 
             startActivityForResult(intent, RC_OCR_CAPTURE);
         }
@@ -104,8 +114,13 @@ import com.google.android.gms.common.api.CommonStatusCodes;
                     textValue.setText(text);
                     Log.d(TAG, "Text read: " + text);
                 } else {
-                    statusMessage.setText(R.string.ocr_failure);
-                    Log.d(TAG, "No Text captured, intent data is null");
+                    try {
+                        statusMessage.setText(R.string.ocr_failure);
+                        Log.d(TAG, "No Text captured, intent data is null");
+                    } catch(Exception e) {
+                        Log.i("Error: ", "d");
+                    }
+
                 }
             } else {
                 statusMessage.setText(String.format(getString(R.string.ocr_error),

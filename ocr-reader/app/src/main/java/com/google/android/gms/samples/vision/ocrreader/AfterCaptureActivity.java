@@ -7,9 +7,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.SparseArray;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.android.gms.vision.text.TextBlock;
@@ -24,6 +29,9 @@ public class AfterCaptureActivity extends AppCompatActivity {
     ImageView icon;
     TextView titleText;
     TextParser parser  = new TextParser();
+    LinearLayout badIngredientsBox;
+    Drawable check;
+    Drawable negative;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,21 +42,32 @@ public class AfterCaptureActivity extends AppCompatActivity {
         itemList = (ArrayList<String>) getIntent().getSerializableExtra("ING-LIST");
         icon = (ImageView) findViewById(R.id.icon);
         titleText = (TextView) findViewById(R.id.TitleText);
-        parser.setUserPreferences("000010");
+        badIngredientsBox = (LinearLayout)findViewById(R.id.BadIngredientsBox);
 
-        Drawable check = getResources().getDrawable(R.drawable.check);
-        Drawable negative = getResources().getDrawable(R.drawable.negative);
+        parser.setUserPreferences("111111");
 
-        ArrayList<String> parserResult = parser.checkAllergens(itemList);
+        check = getResources().getDrawable(R.drawable.check);
+        negative = getResources().getDrawable(R.drawable.negative);
+
+        ArrayList<ArrayList<String>> parserResult = parser.checkAllergens(itemList);
 
         if (parserResult.size() == 0) {
             Log.i("OK", "its a");
             icon.setImageDrawable(check);
         } else {
             Log.i("OK", "its n");
-            titleText.setText("Ingredients are not OK.");
-            titleText.setTextColor(Color.rgb(209,89,98));
-            icon.setImageDrawable(negative);
+            displayNegative(parserResult);
+            for (int i = 0; i < parserResult.size(); i++) {
+                for (int j = 0; j < parserResult.get(i).size(); j++) {
+                    Log.i("OK", parserResult.get(i).get(j));
+                    TextView text = new TextView(this);
+                    text.setText(parserResult.get(i).get(j));
+                    text.setTextColor(Color.rgb(209,89,98));
+                    text.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+                    text.setGravity(Gravity.CENTER_HORIZONTAL);
+                    badIngredientsBox.addView(text);
+                }
+            }
         }
 
         anotherPicture.setOnClickListener(new View.OnClickListener() {
@@ -67,5 +86,14 @@ public class AfterCaptureActivity extends AppCompatActivity {
         Intent i = new Intent(AfterCaptureActivity.this, MainActivity.class);
         startActivity(i);
         finish();
+    }
+
+    private void displayNegative(ArrayList<ArrayList<String>> result) {
+
+        titleText.setText("Ingredients are not OK.");
+        titleText.setTextColor(Color.rgb(209,89,98));
+        icon.setImageDrawable(negative);
+
+
     }
 }
