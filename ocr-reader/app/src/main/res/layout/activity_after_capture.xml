@@ -42,9 +42,10 @@
             android:layout_below="@+id/icon"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="24dp"
+            android:gravity="center_horizontal"
             android:text="All ingredients are OK!"
-            android:textColor="#4EB98C"
-            android:textSize="30sp" />
+            android:textColor="@color/check_green"
+            android:textSize="40sp" />
 
         <LinearLayout
             android:id="@+id/BadIngredientsBox"

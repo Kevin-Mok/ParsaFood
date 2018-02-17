@@ -121,6 +121,7 @@ public class AfterCaptureActivity extends AppCompatActivity {
                                      ArrayList<String> e) {
 
         return (a.size() == 0) && (b.size() == 0) && (c.size() == 0) && (d.size() == 0) && (e.size() == 0);
+//        return false;
     }
 
     public void onBackPressed() {

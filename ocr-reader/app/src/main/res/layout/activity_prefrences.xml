@@ -19,9 +19,9 @@
         android:layout_marginTop="18dp"
         android:fontFamily="sans-serif"
         android:gravity="center_horizontal"
+        android:text="@string/basic_info_label"
         android:textColor="@color/parsayellow"
-        android:textSize="30sp"
-        tools:text="@string/user_info_label" />
+        android:textSize="30sp" />
 
     <TableLayout
         android:layout_width="match_parent"

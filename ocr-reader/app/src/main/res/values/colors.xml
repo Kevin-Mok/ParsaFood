@@ -14,6 +14,7 @@
     <item name="parsapurple" type="color">#513f3f</item>
     <item name="parsayellow" type="color">#8f5e00</item>
     <item name="brown" type="color">#49311c</item>
+    <item name="check_green" type="color">#0b8d00</item>
 
     <integer-array name="androidcolors">
         <item>@color/blue</item>
@@ -29,6 +30,7 @@
         <item>@color/parsapurple</item>
         <item>@color/parsayellow</item>
         <item>@color/brown</item>
+        <item>@color/check_green</item>
     </integer-array>
  
 </resources> 
