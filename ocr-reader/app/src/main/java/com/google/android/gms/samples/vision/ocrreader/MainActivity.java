@@ -83,7 +83,9 @@ import com.google.android.gms.common.api.CommonStatusCodes;
     private String getPreferencesFromActivity() {
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
-            return extras.getString("preferences");
+            if (extras.getString("preferences") != null) {
+                return extras.getString("preferences");
+            }
         }
         return "0000000000";
     }
