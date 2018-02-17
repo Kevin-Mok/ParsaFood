@@ -34,7 +34,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:background="@drawable/rounded_btn"
-            android:fontFamily="sans-serif-condensed"
             android:padding="10dp"
             android:text="@string/scan_ingredients"
             android:textSize="20sp" />
