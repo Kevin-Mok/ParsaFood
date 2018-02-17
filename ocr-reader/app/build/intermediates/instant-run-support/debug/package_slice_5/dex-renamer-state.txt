@@ -1,4 +1,0 @@
-#Fri Feb 16 15:28:54 EST 2018
-base.0=/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_5
-renamed.0=classes.dex
-file.0=/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_5/classes.dex

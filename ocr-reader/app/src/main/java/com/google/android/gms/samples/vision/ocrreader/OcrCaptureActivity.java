@@ -33,6 +33,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.util.SparseArray;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
@@ -50,6 +51,7 @@ import com.google.android.gms.vision.text.TextBlock;
 import com.google.android.gms.vision.text.TextRecognizer;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 /**
  * Activity for the multi-tracker app.  This app detects text and displays the value with the
@@ -78,6 +80,11 @@ public final class OcrCaptureActivity extends AppCompatActivity {
     private ScaleGestureDetector scaleGestureDetector;
     private GestureDetector gestureDetector;
 
+    TextRecognizer textRecognizer;
+    OcrDetectorProcessor detectorProcessor;
+    ArrayList<String> itemList = new ArrayList<String>();
+
+
     /**
      * Initializes the UI and creates the detector pipeline.
      */
@@ -91,7 +98,22 @@ public final class OcrCaptureActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Log.d("YOU CLICKED THE BUTTON:", "NICE!");
+                itemList.clear();
 
+                SparseArray<TextBlock> items = detectorProcessor.getDetectedList();
+
+                for (int i = 0; i < items.size(); ++i) {
+                    TextBlock item = items.valueAt(i);
+                    if (item != null && item.getValue() != null) {
+                        itemList.add(item.getValue());
+
+                    }
+                }
+
+                for (int i = 0; i < itemList.size(); i++) {
+                    Log.i("ITEM " + Integer.toString(i), itemList.get(i));
+                }
+                
             }
         });
 
@@ -177,8 +199,9 @@ public final class OcrCaptureActivity extends AppCompatActivity {
         // A text recognizer is created to find text.  An associated processor instance
         // is set to receive the text recognition results and display graphics for each text block
         // on screen.
-        TextRecognizer textRecognizer = new TextRecognizer.Builder(context).build();
-        textRecognizer.setProcessor(new OcrDetectorProcessor(mGraphicOverlay));
+        textRecognizer = new TextRecognizer.Builder(context).build();
+        detectorProcessor = new OcrDetectorProcessor(mGraphicOverlay);
+        textRecognizer.setProcessor(detectorProcessor);
 
         if (!textRecognizer.isOperational()) {
             // Note: The first time that an app using a Vision API is installed on a

@@ -12,12 +12,174 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/davidkwon/.android/build-cache/0ab9eba3ee560458c7e3142f02c8d72262b48329/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="670df81539ab71918d49b186598b7eff08ef6563">
+        <dex dex="/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b0aebe459809c85b7d03e9873613a1f7f03f4770/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/davidkwon/.android/build-cache/0ab9eba3ee560458c7e3142f02c8d72262b48329/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="670df81539ab71918d49b186598b7eff08ef6563">
+        <dex dex="/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/pre-dexed/debug/classes_b0aebe459809c85b7d03e9873613a1f7f03f4770.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c3c638be6e650b165ab9ae144857b64e82787fad">
+        <dex dex="/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_043688b45706f83a79c065c5042e64afc7b1350a/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/davidkwon/.android/build-cache/956afe78dcf08a274aa87d1be620b4452c2f6ea6/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8a36d229011e75f0caef408e1adf0d3fd4d94e02">
+        <dex dex="/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/pre-dexed/debug/classes_574885951934013b3369456c91946886d9b206ee.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c3c638be6e650b165ab9ae144857b64e82787fad">
+        <dex dex="/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/pre-dexed/debug/classes_043688b45706f83a79c065c5042e64afc7b1350a.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/davidkwon/.android/build-cache/ad31b0270d9163f929bab8f6ea5bae9c7f8003c0/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3dee4ce5844d39d843d503fb8fe04e51e5bfffac">
+        <dex dex="/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8831aca3503a6760ab5cbe567b7aaad3ba11d677/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/davidkwon/.android/build-cache/ad31b0270d9163f929bab8f6ea5bae9c7f8003c0/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3dee4ce5844d39d843d503fb8fe04e51e5bfffac">
+        <dex dex="/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/pre-dexed/debug/classes_8831aca3503a6760ab5cbe567b7aaad3ba11d677.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/davidkwon/.android/build-cache/956afe78dcf08a274aa87d1be620b4452c2f6ea6/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8a36d229011e75f0caef408e1adf0d3fd4d94e02">
+        <dex dex="/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_574885951934013b3369456c91946886d9b206ee/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="12920f9016b8b05acbc2af7cdc13cef6946fe7d3">
+        <dex dex="/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_8107d0a5ecf0f32e7962b43d7fb30369b90200e1/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/davidkwon/.android/build-cache/e1aae9238029a34160fdef6181ffbcbd7d81c331/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6eb9107eb34d2fe2b020662b7fbbec991dcba846">
+        <dex dex="/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/pre-dexed/debug/classes_d72c5b27dd78ed0fe73a2f202277245e3c49d7b6.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/davidkwon/.android/build-cache/e1aae9238029a34160fdef6181ffbcbd7d81c331/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6eb9107eb34d2fe2b020662b7fbbec991dcba846">
+        <dex dex="/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d72c5b27dd78ed0fe73a2f202277245e3c49d7b6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/davidkwon/.android/build-cache/010a9495ebb6406339eb0a76ce4c0e60cb27ff02/output/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6e02e34594ebe9c0501ffda8dd48497f81b82977">
+        <dex dex="/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_08edb852fdd2ad17e67198371e8ccebf837dae93/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/davidkwon/.android/build-cache/010a9495ebb6406339eb0a76ce4c0e60cb27ff02/output/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6e02e34594ebe9c0501ffda8dd48497f81b82977">
+        <dex dex="/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.0_08edb852fdd2ad17e67198371e8ccebf837dae93.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="12920f9016b8b05acbc2af7cdc13cef6946fe7d3">
+        <dex dex="/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_b08f2eabdc0190570ed6a6d8e9cc5e0c891762d1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/davidkwon/.android/build-cache/bfea5b8f2eb8fb1c3e939196bfc6d5e7521b87d3/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f9b41622897665678d31d78e57a361cb0cebcb0d">
+        <dex dex="/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_83b15640bdb6004320edbdbeb83eb574ee3d0400/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/davidkwon/.android/build-cache/bfea5b8f2eb8fb1c3e939196bfc6d5e7521b87d3/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f9b41622897665678d31d78e57a361cb0cebcb0d">
+        <dex dex="/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/pre-dexed/debug/classes_83b15640bdb6004320edbdbeb83eb574ee3d0400.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/davidkwon/.android/build-cache/3caf8b2cd0d48bc63db4c12517636d56ab658963/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c755536e5a100d9c76c8ea0b72f76c018f7a9de2">
+        <dex dex="/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/pre-dexed/debug/classes_1435142a1e6343c4b1270b4330f43bcb09412000.jar" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/davidkwon/.android/build-cache/57b7477f899950773cff65079a53e1998bae85cd/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="f3ee23ef25c9a8fe3d40246d0b7097267963a612">
         <dex dex="/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f838a9909acffd4bbae22b5482e22e2195570ca1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="dbfaa9e7c534108b3563d45ae8122674424f000a">
+        <dex dex="/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_e56b6119a03d1b5d73773de14e7961fd9a537779/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -29,13 +191,40 @@
         <dex dex="/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_507c37a19fe0817ae33f51da3c0a45c03000cc0a/classes.dex" />
     </item>
     <item
-        is-multidex="true"
-        jar="/Users/davidkwon/.android/build-cache/0ab9eba3ee560458c7e3142f02c8d72262b48329/output/jars/classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/Users/davidkwon/.android/build-cache/57b7477f899950773cff65079a53e1998bae85cd/output/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="670df81539ab71918d49b186598b7eff08ef6563">
-        <dex dex="/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b0aebe459809c85b7d03e9873613a1f7f03f4770/classes.dex" />
+        sha1="f3ee23ef25c9a8fe3d40246d0b7097267963a612">
+        <dex dex="/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/pre-dexed/debug/classes_f838a9909acffd4bbae22b5482e22e2195570ca1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/davidkwon/.android/build-cache/5710a09da48f6bd4936a05aeaae1aea26dbd5f0f/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d8bd2268fdcbfd52c76ade65d9900cd8def93a44">
+        <dex dex="/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/pre-dexed/debug/classes_5c8341acc6d0789d85d289c19d1a968389ddbba7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/davidkwon/.android/build-cache/e704617094544cac9feddb6078e2df6b619b29d0/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="45f5eda279825ff470e3f51019d374d1ef61e000">
+        <dex dex="/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/pre-dexed/debug/classes_ac27c12ff04f4944a10958613212756aa29c6505.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/davidkwon/.android/build-cache/79bfcf15d5677b25dab1b06a486b3e4e5ba2d968/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="beac40bcc8a320a896dd15f5109cfcaea5e1e0e3">
+        <dex dex="/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/pre-dexed/debug/classes_507c37a19fe0817ae33f51da3c0a45c03000cc0a.jar" />
     </item>
     <item
         is-multidex="true"
@@ -57,30 +246,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/davidkwon/.android/build-cache/425d2536387182c7f139105e86db5026f354e231/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="c3c638be6e650b165ab9ae144857b64e82787fad">
-        <dex dex="/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_043688b45706f83a79c065c5042e64afc7b1350a/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/davidkwon/.android/build-cache/5710a09da48f6bd4936a05aeaae1aea26dbd5f0f/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="d8bd2268fdcbfd52c76ade65d9900cd8def93a44">
         <dex dex="/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_5c8341acc6d0789d85d289c19d1a968389ddbba7/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/davidkwon/.android/build-cache/ad31b0270d9163f929bab8f6ea5bae9c7f8003c0/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="3dee4ce5844d39d843d503fb8fe04e51e5bfffac">
-        <dex dex="/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8831aca3503a6760ab5cbe567b7aaad3ba11d677/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -92,13 +263,13 @@
         <dex dex="/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4f636d14341828d3609d581e7cec8aabfadfc696/classes.dex" />
     </item>
     <item
-        is-multidex="true"
-        jar="/Users/davidkwon/.android/build-cache/956afe78dcf08a274aa87d1be620b4452c2f6ea6/output/jars/classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/Users/davidkwon/.android/build-cache/6599a142c7715c71d379249a0b8fafd25501a07c/output/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="8a36d229011e75f0caef408e1adf0d3fd4d94e02">
-        <dex dex="/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_574885951934013b3369456c91946886d9b206ee/classes.dex" />
+        sha1="23eb0d2998a782213b56168cbf23a0688b9111d9">
+        <dex dex="/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/pre-dexed/debug/classes_4f636d14341828d3609d581e7cec8aabfadfc696.jar" />
     </item>
     <item
         is-multidex="true"
@@ -110,6 +281,15 @@
         <dex dex="/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_7a394efa1c87a46c712c0b74fd9a462f261c765f/classes.dex" />
     </item>
     <item
+        is-multidex="false"
+        jar="/Users/davidkwon/.android/build-cache/ca48d61b5e4377b3c923317d09c98a0b081fe072/output/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="60d7b23621d31e6f42f4f76f16af467e57a20cda">
+        <dex dex="/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.0_af61c06b9f3c3a975fa4d2aa8998dc3d5ceb4f8f.jar" />
+    </item>
+    <item
         is-multidex="true"
         jar="/Users/davidkwon/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.0/support-annotations-24.2.0.jar"
         jumboMode="true"
@@ -117,6 +297,33 @@
         revision="25.0.0"
         sha1="6be858a75633b1f0a2d24cad740db57775cb6871">
         <dex dex="/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.2.0_616ec3da4e6c03f7e98e49c21dc58d717a600264/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/davidkwon/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.0/support-annotations-24.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6be858a75633b1f0a2d24cad740db57775cb6871">
+        <dex dex="/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/pre-dexed/debug/support-annotations-24.2.0_616ec3da4e6c03f7e98e49c21dc58d717a600264.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/davidkwon/.android/build-cache/d4397c76e6abc690978dacce83e538b99eece754/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="618485fef3ebe12127f7622abbc9b5b39057b5c2">
+        <dex dex="/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/pre-dexed/debug/classes_7a394efa1c87a46c712c0b74fd9a462f261c765f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/davidkwon/.android/build-cache/ca48d61b5e4377b3c923317d09c98a0b081fe072/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fcc945a86ebcbf527429acb8216ec7dae2c06417">
+        <dex dex="/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/pre-dexed/debug/classes_6773bf7a351d933745695cb2a2d640e6a790f232.jar" />
     </item>
     <item
         is-multidex="true"
@@ -137,31 +344,31 @@
         <dex dex="/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6773bf7a351d933745695cb2a2d640e6a790f232/classes.dex" />
     </item>
     <item
-        is-multidex="true"
-        jar="/Users/davidkwon/.android/build-cache/e1aae9238029a34160fdef6181ffbcbd7d81c331/output/jars/classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/Users/davidkwon/.android/build-cache/e1aae9238029a34160fdef6181ffbcbd7d81c331/output/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="6eb9107eb34d2fe2b020662b7fbbec991dcba846">
-        <dex dex="/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d72c5b27dd78ed0fe73a2f202277245e3c49d7b6/classes.dex" />
+        sha1="045be695d968dd707691cc55d23746dbf8cf569a">
+        <dex dex="/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.0_40efbc8efe5b4e67bf64a7946677efd21ef04992.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/Users/davidkwon/.android/build-cache/010a9495ebb6406339eb0a76ce4c0e60cb27ff02/output/jars/libs/internal_impl-24.2.0.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/Users/davidkwon/.android/build-cache/5710a09da48f6bd4936a05aeaae1aea26dbd5f0f/output/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="6e02e34594ebe9c0501ffda8dd48497f81b82977">
-        <dex dex="/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_08edb852fdd2ad17e67198371e8ccebf837dae93/classes.dex" />
+        sha1="032a4b53def5e2ceedfc2e793b126c0163cfa1dd">
+        <dex dex="/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.0_439ad175e8863aa98ab93a3451496c9d53a6deb7.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="/Users/davidkwon/.android/build-cache/010a9495ebb6406339eb0a76ce4c0e60cb27ff02/output/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="12920f9016b8b05acbc2af7cdc13cef6946fe7d3">
-        <dex dex="/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_b08f2eabdc0190570ed6a6d8e9cc5e0c891762d1/classes.dex" />
+        sha1="c84e216d9bf618464d6b9564d71d9a656433e7c4">
+        <dex dex="/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/pre-dexed/debug/classes_a1b8496651599bff75466fd81002025572e6a31c.jar" />
     </item>
     <item
         is-multidex="true"
@@ -192,21 +399,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/davidkwon/.android/build-cache/bfea5b8f2eb8fb1c3e939196bfc6d5e7521b87d3/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="f9b41622897665678d31d78e57a361cb0cebcb0d">
-        <dex dex="/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_83b15640bdb6004320edbdbeb83eb574ee3d0400/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/davidkwon/.android/build-cache/010a9495ebb6406339eb0a76ce4c0e60cb27ff02/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="c84e216d9bf618464d6b9564d71d9a656433e7c4">
         <dex dex="/Users/davidkwon/Documents/Github_Repositories/android-vision/visionSamples/ocr-reader/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a1b8496651599bff75466fd81002025572e6a31c/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/davidkwon/.android/build-cache/bfea5b8f2eb8fb1c3e939196bfc6d5e7521b87d3/output/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="771b3cc0e597b54da25f8086ba73180c59c6bc71">
+        <dex dex="/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.0_8782acaba697e9d01ba911c69f6564683cfb8119.jar" />
     </item>
 
 </items>
