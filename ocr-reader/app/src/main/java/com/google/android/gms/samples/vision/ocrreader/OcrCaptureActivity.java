@@ -442,5 +442,11 @@ public final class OcrCaptureActivity extends AppCompatActivity {
         public void onScaleEnd(ScaleGestureDetector detector) {
             mCameraSource.doZoom(detector.getScaleFactor());
         }
+
+        public void onBackPressed() {
+            Intent i = new Intent(OcrCaptureActivity.this, MainActivity.class);
+            startActivity(i);
+            finish();
+        }
     }
 }

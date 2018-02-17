@@ -34,6 +34,7 @@ dwsync.xml
 *.rawproto
 *.dex
 *.apk
+<<<<<<< Updated upstream
 *.iml
 *.properties
 .*/

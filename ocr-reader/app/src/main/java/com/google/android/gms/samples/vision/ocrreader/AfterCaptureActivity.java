@@ -34,15 +34,15 @@ public class AfterCaptureActivity extends AppCompatActivity {
         itemList = (ArrayList<String>) getIntent().getSerializableExtra("ING-LIST");
         icon = (ImageView) findViewById(R.id.icon);
         titleText = (TextView) findViewById(R.id.TitleText);
+        parser.setUserPreferences("000010");
 
         Drawable check = getResources().getDrawable(R.drawable.check);
         Drawable negative = getResources().getDrawable(R.drawable.negative);
 
-        ArrayList<String> parserResult = parser.checkAllergens(itemList, "100010");
+        ArrayList<String> parserResult = parser.checkAllergens(itemList);
 
         if (parserResult.size() == 0) {
             Log.i("OK", "its a");
-
             icon.setImageDrawable(check);
         } else {
             Log.i("OK", "its n");

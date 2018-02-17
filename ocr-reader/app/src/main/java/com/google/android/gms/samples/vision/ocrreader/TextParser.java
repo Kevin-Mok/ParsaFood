@@ -6,8 +6,9 @@ import java.util.Arrays;
 public class TextParser {
     public static void main(String[] args) {
         TextParser tt = new TextParser();
-        ArrayList<String> ii = new ArrayList<String>(Arrays.asList("ff", "ff"));
-        ArrayList<ArrayList> done  = tt.checkAllergens(ii, "001000");
+        tt.setUserPreferences("001010");
+        ArrayList<String> ii = new ArrayList<String>(Arrays.asList("Soy, ", "soy ojojo"));
+        ArrayList<ArrayList> done  = tt.checkAllergens(ii);
 
         for (ArrayList<String> sub : done){
             for (String str : sub){
@@ -17,6 +18,8 @@ public class TextParser {
 
     }
     public ArrayList<ArrayList<String>> allAllergens;
+
+    public ArrayList<String> userAllergens = new ArrayList<>();
 
     public TextParser(){
         this.allAllergens = this.fillInAllergens();
@@ -44,10 +47,9 @@ public class TextParser {
         return returnList;
     }
 
-    public ArrayList checkAllergens(ArrayList<String> ingredients, String userAllergens){
+    public ArrayList checkAllergens(ArrayList<String> ingredients){
         ArrayList returnList = new ArrayList();
         ArrayList<String> allIngredients = new ArrayList();
-        ArrayList<String> userAllergensList = new ArrayList();
         ArrayList mapping = new ArrayList(Arrays.asList("milk allergen(s)", "egg allergen(s)", "peanut/nut allergen(s)",
                 "wheat allergen(s)", "soy allergen(s)", "seafood allergen(s)"));
 
@@ -63,16 +65,10 @@ public class TextParser {
             }
         }
 
-        // process the user allergens
-        linePieces = userAllergens.split("");
-        for (String str : linePieces) {
-            userAllergensList.add(str);
-        }
-
         // now iterate and find any allergens
         ArrayList temp;
         for (int index = 0; index < 6 ; index++){
-            if (userAllergensList.get(index).equals("1")) {
+            if (this.userAllergens.get(index).equals("1")) {
                 temp = new ArrayList();
                 temp.add(("Possible " + mapping.get(index)));
                 for (String allergen : this.allAllergens.get(index)){
@@ -82,10 +78,24 @@ public class TextParser {
                         }
                     }
                 }
-                returnList.add(temp);
+                if (temp.size() > 1){
+                    returnList.add(temp);
+                }
+
             }
         }
         return returnList;
+    }
+
+    public void setUserPreferences(String userAllergens){
+        this.userAllergens.clear();
+
+        String[] linePieces;
+        linePieces = userAllergens.split("");
+        for (String str : linePieces) {
+            this.userAllergens.add(str);
+        }
+
     }
 
 }
