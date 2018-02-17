@@ -61,7 +61,7 @@ public class TextParser {
             line = str.toLowerCase();
             linePieces = line.split(" ");
             for (String str2 : linePieces){
-                allIngredients.add(str2);
+                allIngredients.add(str2.replaceAll("[^a-zA-Z]", ""));
             }
         }
 
@@ -73,7 +73,7 @@ public class TextParser {
                 temp.add(("Possible " + mapping.get(index)));
                 for (String allergen : this.allAllergens.get(index)){
                     for (String ingredient : allIngredients) {
-                        if (allergen.equals(ingredient)) {
+                        if (allergen.equals(ingredient) && temp.contains(allergen) == false) {
                             temp.add(allergen);
                         }
                     }
@@ -97,5 +97,4 @@ public class TextParser {
         }
 
     }
-
 }
