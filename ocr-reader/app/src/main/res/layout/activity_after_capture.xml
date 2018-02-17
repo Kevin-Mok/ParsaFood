@@ -13,12 +13,32 @@
         tools:layout_editor_absoluteY="8dp">
 
         <ImageView
-            android:id="@+id/check"
+            android:id="@+id/icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            app:srcCompat="@drawable/check"
             android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/AnotherPicture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:text="Take Another Photo"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/TitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/icon"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="44dp"
-            app:srcCompat="@drawable/check" />
+            android:layout_marginTop="24dp"
+            android:text="All ingredients are OK!"
+            android:textColor="#5CB7A4"
+            android:textSize="30sp" />
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
