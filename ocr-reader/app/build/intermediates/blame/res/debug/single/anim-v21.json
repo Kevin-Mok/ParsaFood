@@ -4,11 +4,23 @@
         "source": "/Users/davidkwon/.android/build-cache/6599a142c7715c71d379249a0b8fafd25501a07c/output/res/anim-v21/design_bottom_sheet_slide_in.xml"
     },
     {
+        "merged": "/Users/davidkwon/Desktop/platterz2018/ocr-reader/app/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_in.xml",
+        "source": "/Users/davidkwon/.android/build-cache/5160b92d0000a7db4ada703594590354ebe536df/output/res/anim-v21/design_bottom_sheet_slide_in.xml"
+    },
+    {
         "merged": "/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_out.xml",
         "source": "/Users/davidkwon/.android/build-cache/6599a142c7715c71d379249a0b8fafd25501a07c/output/res/anim-v21/design_bottom_sheet_slide_out.xml"
     },
     {
         "merged": "/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/res/merged/debug/anim-v21/design_appbar_state_list_animator.xml",
         "source": "/Users/davidkwon/.android/build-cache/6599a142c7715c71d379249a0b8fafd25501a07c/output/res/anim-v21/design_appbar_state_list_animator.xml"
+    },
+    {
+        "merged": "/Users/davidkwon/Desktop/platterz2018/ocr-reader/app/build/intermediates/res/merged/debug/anim-v21/design_appbar_state_list_animator.xml",
+        "source": "/Users/davidkwon/.android/build-cache/5160b92d0000a7db4ada703594590354ebe536df/output/res/anim-v21/design_appbar_state_list_animator.xml"
+    },
+    {
+        "merged": "/Users/davidkwon/Desktop/platterz2018/ocr-reader/app/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_out.xml",
+        "source": "/Users/davidkwon/.android/build-cache/5160b92d0000a7db4ada703594590354ebe536df/output/res/anim-v21/design_bottom_sheet_slide_out.xml"
     }
 ]

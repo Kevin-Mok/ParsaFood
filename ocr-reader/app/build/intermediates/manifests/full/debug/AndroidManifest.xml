@@ -6,7 +6,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="9"
+        android:minSdkVersion="14"
         android:targetSdkVersion="23" />
 
     <uses-feature android:name="android.hardware.camera" />
@@ -18,7 +18,7 @@
         android:fullBackupContent="false"
         android:hardwareAccelerated="true"
         android:icon="@drawable/icon"
-        android:label="MultiTrackerApp"
+        android:label="ParsaFood"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat" >
         <meta-data
@@ -37,6 +37,7 @@
         <activity
             android:name="com.google.android.gms.samples.vision.ocrreader.OcrCaptureActivity"
             android:label="Read Text" />
+        <activity android:name="com.google.android.gms.samples.vision.ocrreader.AfterCaptureActivity" />
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"

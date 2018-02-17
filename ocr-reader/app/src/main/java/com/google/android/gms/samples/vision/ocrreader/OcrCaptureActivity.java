@@ -110,9 +110,14 @@ public final class OcrCaptureActivity extends AppCompatActivity {
                     }
                 }
 
-                for (int i = 0; i < itemList.size(); i++) {
-                    Log.i("ITEM " + Integer.toString(i), itemList.get(i));
-                }
+//                for (int i = 0; i < itemList.size(); i++) {
+//                    Log.i("ITEM ITEM" + Integer.toString(i), itemList.get(i));
+//                }
+
+                // Launch After Capture Activity
+                Intent intent = new Intent(OcrCaptureActivity.this, AfterCaptureActivity.class);
+                intent.putExtra("ING-LIST", itemList);
+                startActivity(intent);
                 
             }
         });

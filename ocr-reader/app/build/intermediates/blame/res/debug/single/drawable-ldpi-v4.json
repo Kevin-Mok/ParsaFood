@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/davidkwon/Desktop/platterz2018/ocr-reader/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/common_ic_googleplayservices.png",
+        "source": "/Users/davidkwon/.android/build-cache/ad31b0270d9163f929bab8f6ea5bae9c7f8003c0/output/res/drawable-ldpi-v4/common_ic_googleplayservices.png"
+    },
+    {
         "merged": "/Users/davidkwon/Documents/Github_Repositories/platterz2018/ocr-reader/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/common_ic_googleplayservices.png",
         "source": "/Users/davidkwon/.android/build-cache/ad31b0270d9163f929bab8f6ea5bae9c7f8003c0/output/res/drawable-ldpi-v4/common_ic_googleplayservices.png"
     }

@@ -30,7 +30,7 @@ import com.google.android.gms.common.api.CommonStatusCodes;
  * Main activity demonstrating how to pass extra parameters to an activity that
  * recognizes text.
  */
-public class MainActivity extends Activity implements View.OnClickListener {
+    public class MainActivity extends Activity implements View.OnClickListener {
 
     // Use a compound button so either checkbox or switch widgets work.
     private CompoundButton autoFocus;
