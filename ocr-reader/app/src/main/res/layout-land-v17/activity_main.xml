@@ -30,7 +30,6 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/read_text"
         android:id="@+id/read_text"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
@@ -38,7 +37,6 @@
     <Switch
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/auto_focus"
         android:id="@+id/auto_focus"
         android:layout_above="@+id/read_text"
         android:layout_alignParentStart="true"
@@ -48,7 +46,6 @@
     <Switch
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/use_flash"
         android:id="@+id/use_flash"
         android:layout_alignTop="@+id/auto_focus"
         android:layout_alignEnd="@+id/text_value"

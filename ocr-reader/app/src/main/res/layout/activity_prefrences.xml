@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.google.android.gms.samples.vision.ocrreader.PrefrencesActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="What are your dietary restrictions?"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="0dp"
+        android:layout_marginBottom="29dp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteY="112dp"
+        android:id="@+id/scrollView2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/Milk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:text="Milk Allergy"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/Egg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:text="Egg Allergy"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/Peanut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Peanut Allergy"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/Wheat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:text="Wheat Allergy"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/Soy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:text="Soy Allergy"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/Seafood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:text="Seafood Allergy"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/Lactose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lactose Intolerant"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/Vegan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vegan"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/Vegetarian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vegetarian"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/Gluten"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gluteen Free"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/Apply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apply Preferences"
+        android:layout_marginTop="56dp"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_below="@+id/scrollView2"
+        android:layout_alignLeft="@+id/scrollView2"
+        android:layout_alignStart="@+id/scrollView2" />
+</RelativeLayout>

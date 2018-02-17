@@ -80,6 +80,8 @@ public final class OcrCaptureActivity extends AppCompatActivity {
     private ScaleGestureDetector scaleGestureDetector;
     private GestureDetector gestureDetector;
 
+    private String preferences;
+
     TextRecognizer textRecognizer;
     OcrDetectorProcessor detectorProcessor;
     ArrayList<String> itemList = new ArrayList<String>();
@@ -92,6 +94,9 @@ public final class OcrCaptureActivity extends AppCompatActivity {
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         setContentView(R.layout.ocr_capture);
+
+        preferences = getIntent().getExtras().getString("preferences");
+        Log.i("Prefs:", "In the cap act " + preferences);
 
         Button takePicture = (Button) findViewById(R.id.TakePicture);
         takePicture.setOnClickListener(new View.OnClickListener() {
@@ -121,6 +126,7 @@ public final class OcrCaptureActivity extends AppCompatActivity {
                 // Launch After Capture Activity
                 Intent intent = new Intent(OcrCaptureActivity.this, AfterCaptureActivity.class);
                 intent.putExtra("ING-LIST", itemList);
+                intent.putExtra("preferences", preferences);
                 startActivity(intent);
                 
             }
@@ -191,6 +197,13 @@ public final class OcrCaptureActivity extends AppCompatActivity {
         boolean c = gestureDetector.onTouchEvent(e);
 
         return b || c || super.onTouchEvent(e);
+    }
+
+    public void onBackPressed() {
+        Intent i = new Intent(OcrCaptureActivity.this, MainActivity.class);
+        i.putExtra("preferences", preferences);
+        startActivity(i);
+        finish();
     }
 
     /**
@@ -447,10 +460,5 @@ public final class OcrCaptureActivity extends AppCompatActivity {
             mCameraSource.doZoom(detector.getScaleFactor());
         }
 
-        public void onBackPressed() {
-            Intent i = new Intent(OcrCaptureActivity.this, MainActivity.class);
-            startActivity(i);
-            finish();
-        }
     }
 }

@@ -31,7 +31,8 @@
         <activity
             android:name=".OcrCaptureActivity"
             android:label="Read Text" />
-        <activity android:name=".AfterCaptureActivity"></activity>
+        <activity android:name=".AfterCaptureActivity" />
+        <activity android:name=".PrefrencesActivity"></activity>
     </application>
 
 </manifest>

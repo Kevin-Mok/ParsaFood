@@ -29,33 +29,6 @@
         android:layout_alignRight="@+id/status_message"
         android:layout_alignEnd="@+id/status_message" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/read_text"
-        android:id="@+id/read_text"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/auto_focus"
-        android:id="@+id/auto_focus"
-        android:layout_above="@+id/read_text"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="77dp"
-        android:checked="true" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/use_flash"
-        android:id="@+id/use_flash"
-        android:layout_alignTop="@+id/auto_focus"
-        android:layout_alignRight="@+id/text_value"
-        android:layout_alignEnd="@+id/text_value"
-        android:checked="false" />
 
 </RelativeLayout>

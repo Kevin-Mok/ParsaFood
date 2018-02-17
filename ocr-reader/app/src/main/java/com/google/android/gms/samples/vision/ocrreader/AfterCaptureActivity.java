@@ -32,6 +32,7 @@ public class AfterCaptureActivity extends AppCompatActivity {
     LinearLayout badIngredientsBox;
     Drawable check;
     Drawable negative;
+    String preferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,15 +40,22 @@ public class AfterCaptureActivity extends AppCompatActivity {
         setContentView(R.layout.activity_after_capture);
 
         anotherPicture = (Button) findViewById(R.id.AnotherPicture);
+        preferences = getIntent().getExtras().getString("preferences");
+        Log.i("Prefs:", "In the after capture act " + preferences);
+
         itemList = (ArrayList<String>) getIntent().getSerializableExtra("ING-LIST");
         icon = (ImageView) findViewById(R.id.icon);
         titleText = (TextView) findViewById(R.id.TitleText);
         badIngredientsBox = (LinearLayout)findViewById(R.id.BadIngredientsBox);
 
-        parser.setUserPreferences("111111");
+        parser.setUserPreferences(preferences);
 
         check = getResources().getDrawable(R.drawable.check);
         negative = getResources().getDrawable(R.drawable.negative);
+
+        for (int i = 0; i < itemList.size(); i++) {
+            Log.i("ITEM " + i, itemList.get(i));
+        }
 
         ArrayList<ArrayList<String>> parserResult = parser.checkAllergens(itemList);
 
@@ -76,6 +84,7 @@ public class AfterCaptureActivity extends AppCompatActivity {
 
                 // Launch After Capture Activity
                 Intent intent = new Intent(AfterCaptureActivity.this, OcrCaptureActivity.class);
+                intent.putExtra("preferences", preferences);
                 startActivity(intent);
             }
         });
@@ -84,6 +93,7 @@ public class AfterCaptureActivity extends AppCompatActivity {
 
     public void onBackPressed() {
         Intent i = new Intent(AfterCaptureActivity.this, MainActivity.class);
+        i.putExtra("preferences", preferences);
         startActivity(i);
         finish();
     }
