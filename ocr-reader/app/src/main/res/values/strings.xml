@@ -10,6 +10,10 @@
     <string name="scan_ingredients">Scan Ingredients</string>
     <string name="set_allergens">Set Preferences</string>
     <string name="enter_prefs">Tell me about yourself.</string>
+    <string name="age_label">Age</string>
+    <string name="weight_label">Weight (kg)</string>
+    <string name="height_label">Height (cm)</string>
+    <string name="user_info_label">Basic Information</string>
     <string name="diet_label">Dietary Restrictions</string>
     <string name="egg_choice">Egg Allergy</string>
     <string name="milk_choice">Milk Allergy</string>

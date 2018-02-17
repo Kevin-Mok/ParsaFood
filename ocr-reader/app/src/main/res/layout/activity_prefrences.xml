@@ -10,31 +10,114 @@
     tools:context="com.google.android.gms.samples.vision.ocrreader.PrefrencesActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="18dp"
         android:fontFamily="sans-serif"
-        android:gravity="center"
-        android:text="@string/enter_prefs"
-        android:textColor="@color/parsapurple"
+        android:gravity="center_horizontal"
+        android:textColor="@color/parsayellow"
         android:textSize="30sp"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:text="@string/user_info_label" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="false"
+        android:layout_marginTop="60dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/age_label"
+                android:textColor="@color/parsapurple"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/age_input"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="@android:color/black" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/weight_label"
+                android:textColor="@color/parsapurple"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/weight_input"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="@android:color/black" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/height_label"
+                android:textColor="@color/parsapurple"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/height_input"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="@android:color/black" />
+
+        </TableRow>
+
+    </TableLayout>
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/tableLayout"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:layout_marginBottom="6dp"
         android:fontFamily="sans-serif"
         android:gravity="center_horizontal"
         android:text="@string/diet_label"
-        android:textColor="@color/parsapurple"
+        android:textColor="@color/parsayellow"
         android:textSize="30sp" />
 
     <TableLayout
