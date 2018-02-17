@@ -59,6 +59,62 @@ public class TextParser {
         this.allGluten = (new ArrayList(Arrays.asList("wheat", "rye", "barley", "bulgur", "couscous", "farina", "flour")));
     }
 
+    public int getUserBmr(int mass, int age, int height){
+        double menBmr = 66.473 + (13.7516 * mass) + (5.0033 * height) - (6.755 * age);
+        double womenBmr = 655.0955 + (9.5634 * mass) + (1.8496 * height) + (4.6756 * age);
+        int result = (int)(menBmr + womenBmr) / 2;
+        return result;
+    }
+
+    public ArrayList checkNutrition(ArrayList<String> nutritionFactsInput, String mass, String age, String height){
+        ArrayList nutritionFacts = this.processInput(nutritionFactsInput);
+        ArrayList returnList = new ArrayList();
+        int userMass;
+        int userAge;
+        int userHeight;
+        try{
+            userMass = Integer.parseInt(mass);
+            userAge = Integer.parseInt(age);
+            userHeight = Integer.parseInt(height);
+        } catch (Exception e){
+            returnList.add("The weight, age and/or height for the user is/are invalid");
+            return returnList;
+        }
+        if (nutritionFacts.contains("calories")){
+            try {
+                int calories = Integer.valueOf((nutritionFacts.indexOf("calories") + 1));
+                int userBmr = getUserBmr(userMass, userAge, userHeight);
+                int percent_cal = (int) ((userBmr / calories) * 100);
+                if (calories > userBmr){
+                    returnList.add("The calorie count in this food is over the daily recommended minimum for you!");
+                }else if (calories == userBmr){
+                    returnList.add("The calorie count in this food is at the daily recommended minimum for you!");
+                }else {
+                    returnList.add("The calorie count in this food is "+ percent_cal + "% the daily recommended minimum for you");
+                }
+            }catch (Exception e){
+                returnList.add("Calorie related data could not be calculated");
+            }
+        }
+        if (nutritionFacts.contains("sodium")){
+            try {
+                int sodium_mass = Integer.valueOf(nutritionFacts.indexOf("sodium") + 1);
+                int percent_sodium =  ((sodium_mass / 2300)*100);
+                if (percent_sodium > 100){
+                    returnList.add("The sodium content in this food is over the daily recommended limit of 2300mg!");
+                } else if (percent_sodium == 100){
+                    returnList.add("The sodium content in this food is at the daily recommended limit of 2300mg!");
+                } else {
+                    returnList.add("The sodium content in this food is " +percent_sodium+"% the daily recommended limit of 2300mg");
+                }
+            }catch (Exception e) {
+                returnList.add("Sodium related data could not be calculated");
+            }
+
+        }
+        return returnList;
+    }
+
     public ArrayList fillInAllergens(){
         ArrayList returnList = new ArrayList();
         // milk allergens
@@ -81,7 +137,7 @@ public class TextParser {
         return returnList;
     }
 
-    public ArrayList processIngredients(ArrayList<String> ingredients){
+    public ArrayList processInput(ArrayList<String> ingredients){
         ArrayList<String> allIngredients = new ArrayList();
         // turn ingredient list passed in into a single array called allIngredients
         String line;
@@ -98,7 +154,7 @@ public class TextParser {
 
     public ArrayList checkAllergens(ArrayList<String> ingredients){
         ArrayList returnList = new ArrayList();
-        ArrayList<String> allIngredients = this.processIngredients(ingredients);
+        ArrayList<String> allIngredients = this.processInput(ingredients);
         ArrayList mapping = new ArrayList(Arrays.asList("milk allergen(s)", "egg allergen(s)", "peanut/nut allergen(s)",
                 "wheat allergen(s)", "soy allergen(s)", "seafood allergen(s)"));
 
@@ -130,7 +186,7 @@ public class TextParser {
         if (this.userAllergens.get(6).equals("1")){
             //Log.i("Parse", "LACTOSE");
             returnList.add("Warning: Since you are lactose intolerant you may want to avoid eating this. It contains...");
-            ArrayList<String> allIngredients = this.processIngredients(ingredients);
+            ArrayList<String> allIngredients = this.processInput(ingredients);
             for (String ingredient: allIngredients){
                 for (String item: this.allLactose){
                     if (ingredient.contains(item)){
@@ -151,7 +207,7 @@ public class TextParser {
         if (this.userAllergens.get(7).equals("1")){
             // Log.i("Parse", "VEGAN");
             returnList.add("Warning: Since you are a vegan you may want to avoid eating this. It contains...");
-            ArrayList<String> allIngredients = this.processIngredients(ingredients);
+            ArrayList<String> allIngredients = this.processInput(ingredients);
             for (String ingredient: allIngredients){
                 for (String item: this.allVegan){
                     if (ingredient.contains(item)){
@@ -172,7 +228,7 @@ public class TextParser {
         if (this.userAllergens.get(8).equals("1")){
             // Log.i("Parse", "VEGETARIAN");
             returnList.add("Warning: Since you are a vegetarian you may want to avoid eating this. It contains...");
-            ArrayList<String> allIngredients = this.processIngredients(ingredients);
+            ArrayList<String> allIngredients = this.processInput(ingredients);
             for (String ingredient: allIngredients){
                 for (String item: this.allVegetarian){
                     if (ingredient.contains(item)){
@@ -193,7 +249,7 @@ public class TextParser {
         if (this.userAllergens.get(9).equals("1")){
             // Log.i("Parse", "GLUTEN");
             returnList.add("Warning: Since you prefer gluten free foods you may want to avoid eating this. It contains...");
-            ArrayList<String> allIngredients = this.processIngredients(ingredients);
+            ArrayList<String> allIngredients = this.processInput(ingredients);
             for (String ingredient: allIngredients){
                 for (String item: this.allVegetarian){
                     if (ingredient.contains(item)){
@@ -209,16 +265,9 @@ public class TextParser {
     }
 
     public void setUserPreferences(String input){
-
         this.userAllergens.clear();
-
         for (int i = 0; i < 10; i++) {
             this.userAllergens.add(Character.toString(input.charAt(i)));
         }
-//        for (String str : linePieces) {
-//            this.userAllergens.add(str);
-//        }
-
-
     }
 }
