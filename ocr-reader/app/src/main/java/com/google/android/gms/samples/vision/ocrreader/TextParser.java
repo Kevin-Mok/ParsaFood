@@ -1,27 +1,19 @@
 package com.google.android.gms.samples.vision.ocrreader;
 
+import android.util.Log;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class TextParser {
     public static void main(String[] args) {
         TextParser tt = new TextParser();
-        /*
-        bit 1 --- milk allergen
-        bit 2 --- egg allergen
-        bit 3 --- peanut/nut allergens
-        bit 4 --- wheat allergens
-        bit 5 --- soy allergens
-        bit 6 --- seafood allergens
-        bit 7 --- lactose intolerant
-        bit 8 --- vegan (1= yes, 0 = no)
-        bit 9 --- vegetarian
-        bit 10 --- Gluten free
-        */
+
         tt.setUserPreferences("1111111111");
-        ArrayList<String> ii = new ArrayList<String>(Arrays.asList("Soy, ", "soy ojojo milk"));
+        ArrayList<String> ii = new ArrayList<String>(Arrays.asList(" hoiusdfhium,, oifdshj hif  1.Gelatingt"));
         ArrayList<ArrayList> done  = tt.checkAllergens(ii);
         ArrayList<String> done2 = tt.checkLactose(ii);
+        ArrayList<String> done3 = tt.checkVegan(ii);
 
 
         for (ArrayList<String> sub : done){
@@ -31,6 +23,10 @@ public class TextParser {
         }
 
         for (String str : done2){
+            System.out.println(str);
+        }
+
+        for (String str : done3){
             System.out.println(str);
         }
 
@@ -55,7 +51,7 @@ public class TextParser {
                 "curds", "lactose", "lactulose", "lactate", "custard", "yogurt", "pork", "meat", "beef", "chicken",
                 "honey", "lamb", "veal", "turkey", "egg", "anchovies", "bass", "catfish", "cod", "grouper", "haddock",
                 "pike", "salmon", "snapper", "tilapia", "tuna", "trout", "fish", "crawfish", "crab", "krill",
-                "lobster", "shrimp", "mussels", "squid", "ham", "bacon")));
+                "lobster", "shrimp", "mussels", "squid", "ham", "bacon", "gelatin")));
         this.allVegetarian = (new ArrayList(Arrays.asList("pork", "meat", "beef", "chicken",
                 "lamb", "veal", "turkey", "egg", "anchovies", "bass", "catfish", "cod", "grouper", "haddock",
                 "pike", "salmon", "snapper", "tilapia", "tuna", "trout", "fish", "crawfish", "crab", "krill",
@@ -114,7 +110,7 @@ public class TextParser {
                 temp.add(("Possible " + mapping.get(index)));
                 for (String allergen : this.allAllergens.get(index)){
                     for (String ingredient : allIngredients) {
-                        if (allergen.equals(ingredient) && temp.contains(allergen) == false) {
+                        if (ingredient.contains(allergen) && temp.contains(allergen) == false) {
                             temp.add(allergen);
                         }
                     }
@@ -132,11 +128,12 @@ public class TextParser {
         // Return example ["The warning message here", "milk", "cheese", "lactose"]
         ArrayList returnList = new ArrayList();
         if (this.userAllergens.get(6).equals("1")){
+            //Log.i("Parse", "LACTOSE");
             returnList.add("Warning: Since you are lactose intolerant you may want to avoid eating this. It contains...");
             ArrayList<String> allIngredients = this.processIngredients(ingredients);
             for (String ingredient: allIngredients){
                 for (String item: this.allLactose){
-                    if (ingredient.equals(item)){
+                    if (ingredient.contains(item)){
                         returnList.add(item);
                     }
                 }
@@ -152,11 +149,12 @@ public class TextParser {
         // Return example ["The warning message here", "gluten", "pork", "beef"]
         ArrayList returnList = new ArrayList();
         if (this.userAllergens.get(7).equals("1")){
+            // Log.i("Parse", "VEGAN");
             returnList.add("Warning: Since you are a vegan you may want to avoid eating this. It contains...");
             ArrayList<String> allIngredients = this.processIngredients(ingredients);
             for (String ingredient: allIngredients){
                 for (String item: this.allVegan){
-                    if (ingredient.equals(item)){
+                    if (ingredient.contains(item)){
                         returnList.add(item);
                     }
                 }
@@ -172,11 +170,12 @@ public class TextParser {
         // Return example ["The warning message here", "veal", "pork", "beef"]
         ArrayList returnList = new ArrayList();
         if (this.userAllergens.get(8).equals("1")){
+            // Log.i("Parse", "VEGETARIAN");
             returnList.add("Warning: Since you are a vegetarian you may want to avoid eating this. It contains...");
             ArrayList<String> allIngredients = this.processIngredients(ingredients);
             for (String ingredient: allIngredients){
                 for (String item: this.allVegetarian){
-                    if (ingredient.equals(item)){
+                    if (ingredient.contains(item)){
                         returnList.add(item);
                     }
                 }
@@ -192,11 +191,12 @@ public class TextParser {
         // Return example ["The warning message here", "Gluten", "rye"]
         ArrayList returnList = new ArrayList();
         if (this.userAllergens.get(9).equals("1")){
+            // Log.i("Parse", "GLUTEN");
             returnList.add("Warning: Since you prefer gluten free foods you may want to avoid eating this. It contains...");
             ArrayList<String> allIngredients = this.processIngredients(ingredients);
             for (String ingredient: allIngredients){
                 for (String item: this.allVegetarian){
-                    if (ingredient.equals(item)){
+                    if (ingredient.contains(item)){
                         returnList.add(item);
                     }
                 }
@@ -208,14 +208,17 @@ public class TextParser {
         return returnList;
     }
 
-    public void setUserPreferences(String userAllergens){
+    public void setUserPreferences(String input){
+
         this.userAllergens.clear();
 
-        String[] linePieces;
-        linePieces = userAllergens.split("");
-        for (String str : linePieces) {
-            this.userAllergens.add(str);
+        for (int i = 0; i < 10; i++) {
+            this.userAllergens.add(Character.toString(input.charAt(i)));
         }
+//        for (String str : linePieces) {
+//            this.userAllergens.add(str);
+//        }
+
 
     }
 }

@@ -57,25 +57,48 @@ public class AfterCaptureActivity extends AppCompatActivity {
             Log.i("ITEM " + i, itemList.get(i));
         }
 
-        ArrayList<ArrayList<String>> parserResult = parser.checkAllergens(itemList);
+        ArrayList<ArrayList<String>> allergenItems = parser.checkAllergens(itemList);
+        ArrayList<String> lactoseItems = parser.checkLactose(itemList);
+        ArrayList<String> veganItems = parser.checkVegan(itemList);
+        ArrayList<String> vegetarianItems = parser.checkVegaterian(itemList);
+        ArrayList<String> glutenItems = parser.checkGluten(itemList);
 
-        if (parserResult.size() == 0) {
+        Log.i("size allergerns", "" + allergenItems.size());
+        Log.i("size lactoseItems", "" + lactoseItems.size());
+        Log.i("size veganItems", "" + veganItems.size());
+        Log.i("size vegetarianItems", "" + vegetarianItems.size());
+        Log.i("size glutenItems", "" + glutenItems.size());
+
+
+        if (noBadIngredients(allergenItems, lactoseItems, veganItems, vegetarianItems, glutenItems)) {
             Log.i("OK", "its a");
             icon.setImageDrawable(check);
         } else {
             Log.i("OK", "its n");
-            displayNegative(parserResult);
-            for (int i = 0; i < parserResult.size(); i++) {
-                for (int j = 0; j < parserResult.get(i).size(); j++) {
-                    Log.i("OK", parserResult.get(i).get(j));
-                    TextView text = new TextView(this);
-                    text.setText(parserResult.get(i).get(j));
-                    text.setTextColor(Color.rgb(209,89,98));
-                    text.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-                    text.setGravity(Gravity.CENTER_HORIZONTAL);
-                    badIngredientsBox.addView(text);
-                }
+            titleText.setText("Ingredients are not OK.");
+            titleText.setTextColor(Color.rgb(209,89,98));
+            icon.setImageDrawable(negative);
+
+            if (allergenItems.size() > 0) {
+                displayNegativeNested(allergenItems);
             }
+
+            if (lactoseItems.size() > 0) {
+                displayNegative(lactoseItems);
+            }
+
+            if (veganItems.size() > 0) {
+                displayNegative(veganItems);
+            }
+
+            if (vegetarianItems.size() > 0) {
+                displayNegative(vegetarianItems);
+            }
+
+            if (glutenItems.size() > 0) {
+                displayNegative(glutenItems);
+            }
+
         }
 
         anotherPicture.setOnClickListener(new View.OnClickListener() {
@@ -91,6 +114,15 @@ public class AfterCaptureActivity extends AppCompatActivity {
 
     }
 
+    private boolean noBadIngredients(ArrayList<ArrayList<String>> a,
+                                     ArrayList<String> b,
+                                     ArrayList<String> c,
+                                     ArrayList<String> d,
+                                     ArrayList<String> e) {
+
+        return (a.size() == 0) && (b.size() == 0) && (c.size() == 0) && (d.size() == 0) && (e.size() == 0);
+    }
+
     public void onBackPressed() {
         Intent i = new Intent(AfterCaptureActivity.this, MainActivity.class);
         i.putExtra("preferences", preferences);
@@ -98,12 +130,34 @@ public class AfterCaptureActivity extends AppCompatActivity {
         finish();
     }
 
-    private void displayNegative(ArrayList<ArrayList<String>> result) {
+    private void displayNegativeNested(ArrayList<ArrayList<String>> result) {
 
-        titleText.setText("Ingredients are not OK.");
-        titleText.setTextColor(Color.rgb(209,89,98));
-        icon.setImageDrawable(negative);
-
-
+        for (int i = 0; i < result.size(); i++) {
+            for (int j = 0; j < result.get(i).size(); j++) {
+                Log.i("OK", result.get(i).get(j));
+                TextView text = new TextView(this);
+                text.setText(result.get(i).get(j));
+                text.setTextColor(Color.rgb(209,89,98));
+                text.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+                text.setGravity(Gravity.CENTER_HORIZONTAL);
+                badIngredientsBox.addView(text);
+            }
+        }
     }
+
+    private void displayNegative(ArrayList<String> result) {
+        Log.i("displayneg", "in" + result.size());
+        for (int i = 0; i < result.size(); i++) {
+            Log.i("OK", result.get(i));
+            TextView text = new TextView(this);
+            text.setText(result.get(i));
+            text.setTextColor(Color.rgb(209,89,98));
+            text.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+            text.setGravity(Gravity.CENTER_HORIZONTAL);
+            badIngredientsBox.addView(text);
+        }
+    }
+
+
+
 }
