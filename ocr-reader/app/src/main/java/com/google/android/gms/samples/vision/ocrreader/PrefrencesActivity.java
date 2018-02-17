@@ -58,6 +58,50 @@ public class PrefrencesActivity extends AppCompatActivity {
                 preferenceSelection = getPreferenceString();
             }
         });
+
+        checkPreviousPreferences();
+    }
+
+    private void checkPreviousPreferences() {
+        if (preferenceSelection.charAt(0) == '1') {
+            milk.setChecked(true);
+        }
+
+        if (preferenceSelection.charAt(1) == '1') {
+            egg.setChecked(true);
+        }
+
+        if (preferenceSelection.charAt(2) == '1') {
+            peanut.setChecked(true);
+        }
+
+        if (preferenceSelection.charAt(3) == '1') {
+            wheat.setChecked(true);
+        }
+
+        if (preferenceSelection.charAt(4) == '1') {
+            soy.setChecked(true);
+        }
+
+        if (preferenceSelection.charAt(5) == '1') {
+            seafood.setChecked(true);
+        }
+
+        if (preferenceSelection.charAt(6) == '1') {
+            lactose.setChecked(true);
+        }
+
+        if (preferenceSelection.charAt(7) == '1') {
+            vegan.setChecked(true);
+        }
+
+        if (preferenceSelection.charAt(8) == '1') {
+            vegetarian.setChecked(true);
+        }
+
+        if (preferenceSelection.charAt(9) == '1') {
+            gluten.setChecked(true);
+        }
     }
 
     private String getPreferenceString() {

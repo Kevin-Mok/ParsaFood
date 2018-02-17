@@ -11,7 +11,7 @@
         android:allowBackup="true"
         android:fullBackupContent="false"
         android:hardwareAccelerated="true"
-        android:icon="@drawable/icon"
+        android:icon="@drawable/parsafood_logo"
         android:label="ParsaFood"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat">

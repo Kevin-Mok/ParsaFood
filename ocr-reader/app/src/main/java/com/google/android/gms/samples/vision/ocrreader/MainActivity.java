@@ -134,7 +134,12 @@ import com.google.android.gms.common.api.CommonStatusCodes;
             if (resultCode == CommonStatusCodes.SUCCESS) {
                 if (data != null) {
                     String text = data.getStringExtra(OcrCaptureActivity.TextBlockObject);
-                    statusMessage.setText(R.string.ocr_success);
+                    try {
+                        statusMessage.setText(R.string.ocr_success);
+                    } catch (Exception e){
+                        Log.e("Error", e.toString());
+                    }
+
                     textValue.setText(text);
                     Log.d(TAG, "Text read: " + text);
                 } else {
