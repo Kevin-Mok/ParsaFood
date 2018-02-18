@@ -17,11 +17,15 @@
 package com.google.android.gms.samples.vision.ocrreader;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.app.Activity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.android.gms.common.api.CommonStatusCodes;
@@ -30,29 +34,60 @@ import com.google.android.gms.common.api.CommonStatusCodes;
  * Main activity demonstrating how to pass extra parameters to an activity that
  * recognizes text.
  */
-public class MainActivity extends Activity implements View.OnClickListener {
+    public class MainActivity extends Activity implements View.OnClickListener {
 
-    // Use a compound button so either checkbox or switch widgets work.
-    private CompoundButton autoFocus;
-    private CompoundButton useFlash;
     private TextView statusMessage;
     private TextView textValue;
+    private ImageView logo;
+
+    private Button setPreferences;
+
+    private Drawable logoDrawable;
 
     private static final int RC_OCR_CAPTURE = 9003;
     private static final String TAG = "MainActivity";
+
+    private String preferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        statusMessage = (TextView)findViewById(R.id.status_message);
-        textValue = (TextView)findViewById(R.id.text_value);
+        setPreferences = (Button)findViewById(R.id.set_preferences);
+/*        statusMessage = (TextView)findViewById(R.id.status_message);
+        textValue = (TextView)findViewById(R.id.text_value);*/
 
-        autoFocus = (CompoundButton) findViewById(R.id.auto_focus);
-        useFlash = (CompoundButton) findViewById(R.id.use_flash);
+
+        setPreferences.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                // Launch After Capture Activity
+                Intent intent = new Intent(MainActivity.this, PrefrencesActivity.class);
+                intent.putExtra("preferences", preferences);
+                startActivity(intent);
+            }
+        });
+        //logo = (ImageView)findViewById(R.id.Logo);
+
+        //logoDrawable = getResources().getDrawable(R.drawable.final_logo);
+        //logo.setImageDrawable(logoDrawable);
+
+        preferences = getPreferencesFromActivity();
+
 
         findViewById(R.id.read_text).setOnClickListener(this);
+    }
+
+    private String getPreferencesFromActivity() {
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            if (extras.getString("preferences") != null) {
+                return extras.getString("preferences");
+            }
+        }
+        return "0000000000";
     }
 
     /**
@@ -65,9 +100,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
         if (v.getId() == R.id.read_text) {
             // launch Ocr capture activity.
             Intent intent = new Intent(this, OcrCaptureActivity.class);
-            intent.putExtra(OcrCaptureActivity.AutoFocus, autoFocus.isChecked());
-            intent.putExtra(OcrCaptureActivity.UseFlash, useFlash.isChecked());
-
+            intent.putExtra(OcrCaptureActivity.AutoFocus, true);
+            intent.putExtra(OcrCaptureActivity.UseFlash, false);
+            intent.putExtra("preferences", preferences);
             startActivityForResult(intent, RC_OCR_CAPTURE);
         }
     }
@@ -94,18 +129,28 @@ public class MainActivity extends Activity implements View.OnClickListener {
      * @see #createPendingResult
      * @see #setResult(int)
      */
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//    @Override
+    /*protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if(requestCode == RC_OCR_CAPTURE) {
             if (resultCode == CommonStatusCodes.SUCCESS) {
                 if (data != null) {
                     String text = data.getStringExtra(OcrCaptureActivity.TextBlockObject);
-                    statusMessage.setText(R.string.ocr_success);
+                    try {
+                        statusMessage.setText(R.string.ocr_success);
+                    } catch (Exception e){
+                        Log.e("Error", e.toString());
+                    }
+
                     textValue.setText(text);
                     Log.d(TAG, "Text read: " + text);
                 } else {
-                    statusMessage.setText(R.string.ocr_failure);
-                    Log.d(TAG, "No Text captured, intent data is null");
+                    try {
+                        statusMessage.setText(R.string.ocr_failure);
+                        Log.d(TAG, "No Text captured, intent data is null");
+                    } catch(Exception e) {
+                        Log.i("Error: ", "d");
+                    }
+
                 }
             } else {
                 statusMessage.setText(String.format(getString(R.string.ocr_error),
@@ -115,5 +160,5 @@ public class MainActivity extends Activity implements View.OnClickListener {
         else {
             super.onActivityResult(requestCode, resultCode, data);
         }
-    }
+    }*/
 }

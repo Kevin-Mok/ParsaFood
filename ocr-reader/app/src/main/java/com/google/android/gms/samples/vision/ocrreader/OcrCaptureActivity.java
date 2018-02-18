@@ -33,10 +33,12 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.util.SparseArray;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -49,6 +51,7 @@ import com.google.android.gms.vision.text.TextBlock;
 import com.google.android.gms.vision.text.TextRecognizer;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 /**
  * Activity for the multi-tracker app.  This app detects text and displays the value with the
@@ -77,6 +80,13 @@ public final class OcrCaptureActivity extends AppCompatActivity {
     private ScaleGestureDetector scaleGestureDetector;
     private GestureDetector gestureDetector;
 
+    private String preferences;
+
+    TextRecognizer textRecognizer;
+    OcrDetectorProcessor detectorProcessor;
+    ArrayList<String> itemList = new ArrayList<String>();
+
+
     /**
      * Initializes the UI and creates the detector pipeline.
      */
@@ -85,11 +95,48 @@ public final class OcrCaptureActivity extends AppCompatActivity {
         super.onCreate(icicle);
         setContentView(R.layout.ocr_capture);
 
+        preferences = getIntent().getExtras().getString("preferences");
+        Log.i("Prefs:", "In the cap act " + preferences);
+
+        Button takePicture = (Button) findViewById(R.id.TakePicture);
+        takePicture.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("YOU CLICKED THE BUTTON:", "NICE!");
+                itemList.clear();
+
+                SparseArray<TextBlock> items = detectorProcessor.getDetectedList();
+
+                try {
+                    for (int i = 0; i < items.size(); ++i) {
+                        TextBlock item = items.valueAt(i);
+                        if (item != null && item.getValue() != null) {
+                            itemList.add(item.getValue());
+                        }
+                    }
+                } catch (Exception e) {
+                    Log.e("Error", e.toString());
+                }
+
+
+//                for (int i = 0; i < itemList.size(); i++) {
+//                    Log.i("ITEM ITEM" + Integer.toString(i), itemList.get(i));
+//                }
+
+                // Launch After Capture Activity
+                Intent intent = new Intent(OcrCaptureActivity.this, AfterCaptureActivity.class);
+                intent.putExtra("ING-LIST", itemList);
+                intent.putExtra("preferences", preferences);
+                startActivity(intent);
+                
+            }
+        });
+
         mPreview = (CameraSourcePreview) findViewById(R.id.preview);
         mGraphicOverlay = (GraphicOverlay<OcrGraphic>) findViewById(R.id.graphicOverlay);
 
         // read parameters from the intent used to launch the activity.
-        boolean autoFocus = getIntent().getBooleanExtra(AutoFocus, false);
+        boolean autoFocus = getIntent().getBooleanExtra(AutoFocus, true);
         boolean useFlash = getIntent().getBooleanExtra(UseFlash, false);
 
         // Check for the camera permission before accessing the camera.  If the
@@ -104,10 +151,12 @@ public final class OcrCaptureActivity extends AppCompatActivity {
         gestureDetector = new GestureDetector(this, new CaptureGestureListener());
         scaleGestureDetector = new ScaleGestureDetector(this, new ScaleListener());
 
-        Snackbar.make(mGraphicOverlay, "Tap to capture. Pinch/Stretch to zoom",
-                Snackbar.LENGTH_LONG)
-                .show();
+//        Snackbar.make(mGraphicOverlay, "Tap to capture. Pinch/Stretch to zoom",
+//                Snackbar.LENGTH_LONG)
+//                .show();
     }
+
+
 
     /**
      * Handles the requesting of the camera permission.  This includes
@@ -150,6 +199,13 @@ public final class OcrCaptureActivity extends AppCompatActivity {
         return b || c || super.onTouchEvent(e);
     }
 
+    public void onBackPressed() {
+        Intent i = new Intent(OcrCaptureActivity.this, MainActivity.class);
+        i.putExtra("preferences", preferences);
+        startActivity(i);
+        finish();
+    }
+
     /**
      * Creates and starts the camera.  Note that this uses a higher resolution in comparison
      * to other detection examples to enable the ocr detector to detect small text samples
@@ -165,8 +221,9 @@ public final class OcrCaptureActivity extends AppCompatActivity {
         // A text recognizer is created to find text.  An associated processor instance
         // is set to receive the text recognition results and display graphics for each text block
         // on screen.
-        TextRecognizer textRecognizer = new TextRecognizer.Builder(context).build();
-        textRecognizer.setProcessor(new OcrDetectorProcessor(mGraphicOverlay));
+        textRecognizer = new TextRecognizer.Builder(context).build();
+        detectorProcessor = new OcrDetectorProcessor(mGraphicOverlay);
+        textRecognizer.setProcessor(detectorProcessor);
 
         if (!textRecognizer.isOperational()) {
             // Note: The first time that an app using a Vision API is installed on a
@@ -201,6 +258,7 @@ public final class OcrCaptureActivity extends AppCompatActivity {
                 .setFlashMode(useFlash ? Camera.Parameters.FLASH_MODE_TORCH : null)
                 .setFocusMode(autoFocus ? Camera.Parameters.FOCUS_MODE_CONTINUOUS_PICTURE : null)
                 .build();
+
     }
 
     /**
@@ -401,5 +459,6 @@ public final class OcrCaptureActivity extends AppCompatActivity {
         public void onScaleEnd(ScaleGestureDetector detector) {
             mCameraSource.doZoom(detector.getScaleFactor());
         }
+
     }
 }
