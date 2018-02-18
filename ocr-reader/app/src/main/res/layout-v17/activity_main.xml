@@ -35,7 +35,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:background="@drawable/rounded_btn"
+<<<<<<< HEAD
             android:fontFamily="@font/open_sans_semibold"
+=======
+>>>>>>> origin/kevin-2
             android:padding="10dp"
             android:text="@string/scan_ingredients"
             android:textSize="20sp" />

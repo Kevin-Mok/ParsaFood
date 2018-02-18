@@ -34,7 +34,7 @@ public class PrefrencesActivity extends AppCompatActivity {
 
         preferenceSelection = getIntent().getExtras().getString("preferences");
         milk = (CheckBox) findViewById(R.id.Milk);
-        egg = (CheckBox) findViewById(R.id.Egg);
+        egg = (CheckBox) findViewById(R.id.Egg_Allergy);
         peanut = (CheckBox) findViewById(R.id.Peanut);
         wheat = (CheckBox) findViewById(R.id.Wheat);
         soy = (CheckBox) findViewById(R.id.Soy);
