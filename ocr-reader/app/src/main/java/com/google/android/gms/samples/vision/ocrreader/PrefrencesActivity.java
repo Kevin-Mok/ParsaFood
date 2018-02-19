@@ -2,17 +2,14 @@ package com.google.android.gms.samples.vision.ocrreader;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.StringBuilderPrinter;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Toast;
 
 public class PrefrencesActivity extends AppCompatActivity {
-
-    private String preferenceSelection;
 
     CheckBox milk;
     CheckBox egg;
@@ -24,8 +21,8 @@ public class PrefrencesActivity extends AppCompatActivity {
     CheckBox vegan;
     CheckBox vegetarian;
     CheckBox gluten;
-
     Button apply;
+    private String preferenceSelection;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +31,7 @@ public class PrefrencesActivity extends AppCompatActivity {
 
         preferenceSelection = getIntent().getExtras().getString("preferences");
         milk = (CheckBox) findViewById(R.id.Milk);
-        egg = (CheckBox) findViewById(R.id.Egg_Allergy);
+        egg = (CheckBox) findViewById(R.id.Egg);
         peanut = (CheckBox) findViewById(R.id.Peanut);
         wheat = (CheckBox) findViewById(R.id.Wheat);
         soy = (CheckBox) findViewById(R.id.Soy);

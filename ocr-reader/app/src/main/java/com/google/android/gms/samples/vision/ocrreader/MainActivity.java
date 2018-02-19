@@ -16,37 +16,28 @@
 
 package com.google.android.gms.samples.vision.ocrreader;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.app.Activity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import com.google.android.gms.common.api.CommonStatusCodes;
 
 /**
  * Main activity demonstrating how to pass extra parameters to an activity that
  * recognizes text.
  */
-    public class MainActivity extends Activity implements View.OnClickListener {
-
-    private TextView statusMessage;
-    private TextView textValue;
-    private ImageView logo;
-
-    private Button setPreferences;
-
-    private Drawable logoDrawable;
+public class MainActivity extends Activity implements View.OnClickListener {
 
     private static final int RC_OCR_CAPTURE = 9003;
     private static final String TAG = "MainActivity";
-
+    private TextView statusMessage;
+    private TextView textValue;
+    private ImageView logo;
+    private Button setPreferences;
+    private Drawable logoDrawable;
     private String preferences;
 
     @Override
@@ -54,7 +45,7 @@ import com.google.android.gms.common.api.CommonStatusCodes;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        setPreferences = (Button)findViewById(R.id.set_preferences);
+        setPreferences = (Button) findViewById(R.id.set_preferences);
 /*        statusMessage = (TextView)findViewById(R.id.status_message);
         textValue = (TextView)findViewById(R.id.text_value);*/
 

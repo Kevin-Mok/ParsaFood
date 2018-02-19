@@ -3,24 +3,18 @@ package com.google.android.gms.samples.vision.ocrreader;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
-import android.util.SparseArray;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.google.android.gms.vision.text.TextBlock;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Locale;
 
@@ -31,7 +25,7 @@ public class AfterCaptureActivity extends AppCompatActivity {
     Button textToSpeechButton;
     ImageView icon;
     TextView titleText;
-    TextParser parser  = new TextParser();
+    TextParser parser = new TextParser();
     LinearLayout badIngredientsBox;
     Drawable check;
     Drawable negative;
@@ -51,7 +45,7 @@ public class AfterCaptureActivity extends AppCompatActivity {
         itemList = (ArrayList<String>) getIntent().getSerializableExtra("ING-LIST");
         icon = (ImageView) findViewById(R.id.icon);
         titleText = (TextView) findViewById(R.id.TitleText);
-        badIngredientsBox = (LinearLayout)findViewById(R.id.BadIngredientsBox);
+        badIngredientsBox = (LinearLayout) findViewById(R.id.BadIngredientsBox);
         textToSpeechButton = (Button) findViewById(R.id.TextToSpeech);
 
         parser.setUserPreferences(preferences);
@@ -96,7 +90,7 @@ public class AfterCaptureActivity extends AppCompatActivity {
             speechText.append("The ingredients are not okay, ");
             icon.setImageDrawable(check);
             titleText.setText("Ingredients are not OK. ");
-            titleText.setTextColor(Color.rgb(209,89,98));
+            titleText.setTextColor(Color.rgb(209, 89, 98));
             icon.setImageDrawable(negative);
 
             if (allergenItems.size() > 0) {
@@ -176,7 +170,7 @@ public class AfterCaptureActivity extends AppCompatActivity {
                 Log.i("OK", result.get(i).get(j));
                 TextView text = new TextView(this);
                 text.setText(result.get(i).get(j));
-                text.setTextColor(Color.rgb(209,89,98));
+                text.setTextColor(Color.rgb(209, 89, 98));
                 text.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
                 text.setGravity(Gravity.CENTER_HORIZONTAL);
                 badIngredientsBox.addView(text);
@@ -196,7 +190,7 @@ public class AfterCaptureActivity extends AppCompatActivity {
             Log.i("OK", result.get(i));
             TextView text = new TextView(this);
             text.setText(result.get(i));
-            text.setTextColor(Color.rgb(209,89,98));
+            text.setTextColor(Color.rgb(209, 89, 98));
             text.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             text.setGravity(Gravity.CENTER_HORIZONTAL);
             badIngredientsBox.addView(text);
@@ -204,7 +198,6 @@ public class AfterCaptureActivity extends AppCompatActivity {
         speechText.append(result.get(result.size() - 1));
         speechText.append(" ");
     }
-
 
 
 }
