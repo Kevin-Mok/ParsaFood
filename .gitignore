@@ -7,6 +7,7 @@ captures/
 *.apk
 *.iml
 *.txt
+*.html
 .gradle
 .idea
 .DS_Store

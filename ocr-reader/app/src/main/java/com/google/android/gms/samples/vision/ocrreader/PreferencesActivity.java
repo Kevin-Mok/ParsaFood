@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Toast;
 
-public class PrefrencesActivity extends AppCompatActivity {
+public class PreferencesActivity extends AppCompatActivity {
 
     CheckBox milk;
     CheckBox egg;
@@ -167,7 +167,7 @@ public class PrefrencesActivity extends AppCompatActivity {
     }
 
     public void onBackPressed() {
-        Intent i = new Intent(PrefrencesActivity.this, MainActivity.class);
+        Intent i = new Intent(PreferencesActivity.this, MainActivity.class);
         i.putExtra("preferences", preferenceSelection);
         startActivity(i);
         finish();

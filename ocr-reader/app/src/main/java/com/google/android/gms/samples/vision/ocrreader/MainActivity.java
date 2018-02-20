@@ -25,6 +25,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.gms.samples.vision.ocrreader.ocr.OcrCaptureActivity;
+
 /**
  * Main activity demonstrating how to pass extra parameters to an activity that
  * recognizes text.
@@ -55,7 +57,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
             public void onClick(View view) {
 
                 // Launch After Capture Activity
-                Intent intent = new Intent(MainActivity.this, PrefrencesActivity.class);
+                Intent intent = new Intent(MainActivity.this, PreferencesActivity.class);
                 intent.putExtra("preferences", preferences);
                 startActivity(intent);
             }

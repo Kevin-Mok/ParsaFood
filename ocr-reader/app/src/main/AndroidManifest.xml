@@ -29,10 +29,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".OcrCaptureActivity"
+            android:name=".ocr.OcrCaptureActivity"
             android:label="Read Text" />
         <activity android:name=".AfterCaptureActivity" />
-        <activity android:name=".PrefrencesActivity"></activity>
+        <activity android:name=".PreferencesActivity"></activity>
     </application>
 
 </manifest>

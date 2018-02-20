@@ -1,48 +1,42 @@
-Android Vision API Samples
-============
+# ParsaFood
 
-These samples demonstrate the vision API for detecting faces and barcodes.
+![parsafood-logo](https://i.imgur.com/XXJC9XJ.png)
+![main-menu](https://i.imgur.com/YQS1ZTOm.png)
 
-Introduction
-------------
+An Android app that reads ingredients labels and alerts the user of any
+ingredients that may conflict with their dietary restrictions/allergies. 
 
-Pre-requisites
---------------
- Android Play Services SDK level 26 or greater.
+## Key Features
+- allows the user to set their allergies/dietary restrictions
+  - allergies:
+	- egg
+    - gluten
+    - milk
+    - nut
+    - seafood
+    - soy
+    - wheat
+  - diets:
+    - vegetarian
+    - vegan
 
-Getting Started
----------------
-The samples build using Gradle in Android Studio.  There is no special
-configuration required.
+## Motivation
 
-Support (Post Release)
--------
+The idea for an ingredients reader came about when I thought about how often I 
+read ingredients labels as a vegan and the amount of times I misread the label,
+only to find out after I had already bought the product.
 
-For General questions and discussion on StackOverflow:
-- Stack Overflow: http://stackoverflow.com/questions/tagged/android-vision
+After discovering that there did not seem to be any good apps on
+iOS/Android/GitHub that did this exact thing, I believed it would be an
+excellent app idea to try out at the [Platterz
+Hackathon](https://www.eventbrite.com/e/platterz-hackathon-tickets-42682237722#),
+where the theme was food-related.
 
-If you've found an error in this sample, please file an issue:
-https://github.com/googlesamples/android-vision/issues
+## Group Members
+- [David Kwon](https://github.com/xorye)
+- [Kavan Lam](https://github.com/lamkavan)
+- [Kevin Mok](https://github.com/Kevin-Mok)
 
-Patches are encouraged, and may be submitted by forking this project and
-submitting a pull request through GitHub.
-
-License
--------
-
-Copyright 2015 Google, Inc. All Rights Reserved.
-
-Licensed to the Apache Software Foundation (ASF) under one or more contributor
-license agreements.  See the NOTICE file distributed with this work for
-additional information regarding copyright ownership.  The ASF licenses this
-file to you under the Apache License, Version 2.0 (the "License"); you may not
-use this file except in compliance with the License.  You may obtain a copy of
-the License at
-
-  http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
-WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
-License for the specific language governing permissions and limitations under
-the License.
+## Sources
+- [Mobile Vision Text Recognition API ](https://developers.google.com/vision/android/text-overvie://developers.google.com/vision/android/text-overview)
+- [Android API Demo](https://github.com/googlesamples/android-vision/tree/master/visionSamples/ocr-reader)

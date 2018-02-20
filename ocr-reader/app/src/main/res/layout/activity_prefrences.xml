@@ -7,7 +7,7 @@
     android:layout_alignParentBottom="true"
     android:layout_alignParentEnd="false"
     android:background="@drawable/bg"
-    tools:context="com.google.android.gms.samples.vision.ocrreader.PrefrencesActivity">
+    tools:context="com.google.android.gms.samples.vision.ocrreader.PreferencesActivity">
 
     <TextView
         android:id="@+id/textView2"
